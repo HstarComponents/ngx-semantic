@@ -3,6 +3,7 @@
 var gulp = require('gulp');
 // var del = require('del');
 var ts = require('gulp-typescript');
+let webpack = require('gulp-webpack');
 // var notify = require('gulp-notify');
 
 // gulp.task('clean', (callback) => del(['./dist'], callback));
@@ -30,5 +31,28 @@ gulp.task('compileTs', () => {
 //   callback();
 // });
 
+gulp.task('buildComponents', () => {
+  return gulp.src('ng2-semantic.ts')
+    .pipe(webpack({
+      // watch: true,
+      module: {
+        loaders: [
+          {
+            test: /\.ts$/, loader: 'ts', query: {
+              compilerOptions: {
+                removeComments: true,
+                noEmitHelpers: false
+              }
+            }
+          },
+        ],
+      },
+      output: {
+        filename: 'ng2-semantic.js'
+      }
+    }))
+    .pipe(gulp.dest('dist/'));
+});
 
-gulp.task('default', gulp.series('compileTs'));
+
+gulp.task('default', gulp.series('buildComponents', 'compileTs'));
