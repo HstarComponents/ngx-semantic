@@ -32,7 +32,7 @@ gulp.task('compileTs', () => {
 // });
 
 gulp.task('buildComponents', () => {
-  return gulp.src('ng2-semantic.ts')
+  return gulp.src('./src/ng2-semantic.ts')
     .pipe(webpack({
       // watch: true,
       module: {
