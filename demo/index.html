@@ -19,41 +19,7 @@
   <script src="/node_modules/jquery/dist/jquery.js"></script>
   <script src="/assets/semantic-ui/semantic.js"></script>
   
-  <!-- IE required polyfills -->
-  <script src="/node_modules/es6-shim/es6-shim.js"></script>
-  <script src="/node_modules/systemjs/dist/system-polyfills.js"></script>
-  <script src="/node_modules/angular2/es6/dev/src/testing/shims_for_IE.js"></script>
-  
-  <!-- Angular2 required -->
-  <script src="/node_modules/systemjs/dist/system.js"></script>
-  <script src="/node_modules/angular2/bundles/angular2-polyfills.js"></script>
-  <!--<script src="node_modules/rxjs/bundles/Rx.js"></script>-->
-  
-  <!-- angular2这坑货，必须使用这个才可以兼容，为了避免外部请求，我下载到本地，命名为Rx-1.js -->
-  <script src="https://code.angularjs.org/2.0.0-beta.12/Rx.js"></script>
-  <script src="/node_modules/angular2/bundles/angular2.js"></script>
-  <script src="/node_modules/angular2/bundles/router.js"></script>
-  
-  <!--<script src="/dist/ng2-semantic.js"></script>-->
-
-  <script>
-    <!-- 2. Configure SystemJS -->
-    System.config({
-      defaultJSExtensions: true,
-      packageConfigPaths: [
-        '/node_modules/*/package.json'
-      ],
-      packages: {
-        angular2: {
-          defaultExtension: false
-        },
-        rxjs: {
-          defaultExtension: false
-        }
-      }
-    });
-    System.import('bootstrap');
-  </script>
+  <script src="/webpack-dev-server.js"></script>
 </body>
 
 </html>

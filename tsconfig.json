@@ -9,7 +9,8 @@
     "experimentalDecorators": true,
     "removeComments": false,
     "noImplicitAny": false,
-    "noLib": false
+    "noLib": false,
+    "noEmitHelpers": true
   },
   "exclude":[
     "node_modules"
