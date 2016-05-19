@@ -1,7 +1,9 @@
-export {MODAL_DIRECTIVES} from './components/modal';
+export * from './components/rating';
 
-export {Progress} from './components/progress';
+export * from './components/modal';
 
-export {Rating} from './components/rating';
+export * from './components/progress';
 
-export {TAB_DIRECTIVES} from './components/tabs';
+export * from './components/tabs';
+
+export * from './components/tags';

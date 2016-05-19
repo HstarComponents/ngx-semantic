@@ -1,4 +1,4 @@
-import {Directive, ElementRef, Input, Injectable} from "angular2/core";
+import {Directive, ElementRef, Input, Injectable} from "@angular/core";
 
 @Directive({
   selector: "[modalContent]",

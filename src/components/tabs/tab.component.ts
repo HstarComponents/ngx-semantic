@@ -1,4 +1,4 @@
-import {Component, Input, Host, TemplateRef, OnInit, OnDestroy } from "angular2/core";
+import {Component, Input, Host, TemplateRef, OnInit, OnDestroy } from "@angular/core";
 import {Tabset} from './tabset.component';
 
 @Component({

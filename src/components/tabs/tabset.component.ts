@@ -1,11 +1,11 @@
-import {ContentChildren, Component, QueryList, Input, AfterContentInit, ElementRef, EventEmitter, Output, Injectable} from "angular2/core";
+import {ContentChildren, Component, QueryList, Input, AfterContentInit, ElementRef, EventEmitter, Output, Injectable} from "@angular/core";
 import {Tab} from './tab.component';
 
 @Component({
   selector: "s-tabset",
   template: `
 <div class="ui tabular menu">
-  <div class="item" [attr.data-tab]="tab.tabId" *ngFor="#tab of tabs" [class.active]="tab.active"
+  <div class="item" [attr.data-tab]="tab.tabId" *ngFor="let tab of tabs" [class.active]="tab.active"
    [class.removable]="tab.removable" (click)="changeActiveTab(tab);">
     {{tab.heading}}
     <i class="remove circle icon" *ngIf="tab.removable" (click)="removeTab(tab)"></i>
@@ -35,9 +35,11 @@ export class Tabset implements AfterContentInit {
   public constructor() {
   }
 
-  private setActiveTabAfterActiveTabRemoved(index: number): void {
+  private _setActiveTabAfterActiveTabRemoved(index: number): void {
     let len = this.tabs.length;
-    this.tabs[(len > index ? index : (len - 1))].active = true;
+    if(len > 0){
+      this.tabs[(len > index ? index : (len - 1))].active = true;
+    }
   }
 
   public changeActiveTab(tab: Tab): void {
@@ -56,7 +58,7 @@ export class Tabset implements AfterContentInit {
     this.onTabRemoved.emit(tab);
     if (tab.active) {
       tab.active = false;
-      this.setActiveTabAfterActiveTabRemoved(idx);
+      this._setActiveTabAfterActiveTabRemoved(idx);
     }
   }
 

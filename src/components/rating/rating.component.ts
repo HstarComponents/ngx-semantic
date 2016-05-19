@@ -1,12 +1,12 @@
-import {Component, Input, EventEmitter, Self, Output, Injectable, ElementRef} from "angular2/core";
+import {Component, Input, EventEmitter, Self, Output, Injectable, ElementRef} from "@angular/core";
 
-import {ControlValueAccessor, NgModel} from 'angular2/common';
+import {ControlValueAccessor, NgModel} from '@angular/common';
 
 @Component({
   selector: "s-rating[ngModel]",
   template: `
 <div class="ui rating" [class.star]="type === 'star'" [class.heart]="type === 'heart'" [ngClass]="size">
-  <i class="icon" *ngFor="#item of rates,#index=index" [class.active]="item.active" (click)="rate(index + 1)"></i>
+  <i class="icon" *ngFor="let item of rates, let index=index" [class.active]="item.active" (click)="rate(index + 1)"></i>
 </div>`
 })
 @Injectable()
@@ -17,6 +17,10 @@ export class Rating implements ControlValueAccessor {
   private value: number;
 
   private nativeElement: any;
+
+  private onChange: Function;
+
+  private onTouched: Function;
 
   private rates: Array<any>;
 
@@ -31,7 +35,7 @@ export class Rating implements ControlValueAccessor {
 
   @Input()
   public size: string;
-  
+
   public constructor(vm: NgModel, templateRef: ElementRef) {
     this.vm = vm;
     vm.valueAccessor = this;
@@ -50,12 +54,13 @@ export class Rating implements ControlValueAccessor {
   public registerOnTouched(fn: () => {}): void {
     this.onTouched = fn;
   }
+
   //endregion
 
   public ngOnInit(): void {
     this.rates = [];
     for (let i = 0; i < this.max; i++) {
-      let item = {};
+      let item: { active: boolean } = { active: false };
       if (i <= this.value) {
         item.active = true;
       }

@@ -1,4 +1,4 @@
-import {Component, Input, EventEmitter, Self, Output, Injectable, ElementRef} from "angular2/core";
+import {Component, Input, EventEmitter, Self, Output, Injectable, ElementRef} from "@angular/core";
 
 @Component({
   selector: "s-modal",
@@ -12,14 +12,17 @@ import {Component, Input, EventEmitter, Self, Output, Injectable, ElementRef} fr
 export class Modal {
 
   private nativeElement;
+  
   private iElement;
 
   @Input()
-  public set isShown(val: boolean): void {
-    if (val === true) {
-      this.iElement.modal('show');
-    } else if (val === false) {
-      this.iElement.modal('hide');
+  public set isShown(val: boolean) {
+    if (this.iElement) {
+      if (val === true) {
+        this.iElement.modal('show');
+      } else if (val === false) {
+        this.iElement.modal('hide');
+      }
     }
   }
 
@@ -40,17 +43,19 @@ export class Modal {
   }
 
   public ngAfterViewInit(): void {
-    this.iElement = $(this.nativeElement).find('> .ui.modal');
+    let self = this;
+    this.iElement = window.jQuery(this.nativeElement).find('> .ui.modal');
     this.iElement.modal({
       detachable: false,
       allowMultiple: true,
       closable: false,
       onApprove: () => false,
       onDeny: () => false,
+      onHidden: () => self.isShown = false 
     });
   }
-  
-  getModalClass(){
+
+  getModalClass() {
     return [this.type, this.size].join(' ');
   }
 } 

@@ -1,6 +1,6 @@
-import {Component, Input, EventEmitter, Self, Output, Injectable, ElementRef} from "angular2/core";
+import {Component, Input, EventEmitter, Self, Output, Injectable, ElementRef} from "@angular/core";
 
-import {ControlValueAccessor, NgModel} from 'angular2/common';
+import {ControlValueAccessor, NgModel} from '@angular/common';
 
 @Component({
   selector: "s-progress[ngModel]",
@@ -16,6 +16,12 @@ import {ControlValueAccessor, NgModel} from 'angular2/common';
 export class Progress implements ControlValueAccessor {
 
   public vm: NgModel;
+  
+  private nativeElement: any;
+  
+  private onChange: Function;
+  
+  private onTouched: Function;
 
   private value: number;
 
@@ -67,7 +73,7 @@ export class Progress implements ControlValueAccessor {
       return 'auto';
     }
   }
-  public getClass(): Array<string>{
+  public getClass(): string{
     return [this.state, this.type, this.size, this.color].join(' ');
   }
 } 

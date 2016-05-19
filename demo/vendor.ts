@@ -1,5 +1,5 @@
 //jQuery
-import 'jquery';
+// import 'jquery';
 
 // Angular 2
 import '@angular/platform-browser';
