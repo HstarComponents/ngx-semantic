@@ -44,7 +44,7 @@ export class Modal {
 
   public ngAfterViewInit(): void {
     let self = this;
-    this.iElement = window.jQuery(this.nativeElement).find('> .ui.modal');
+    this.iElement = jQuery(this.nativeElement).find('> .ui.modal');
     this.iElement.modal({
       detachable: false,
       allowMultiple: true,

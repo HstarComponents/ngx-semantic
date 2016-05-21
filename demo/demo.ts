@@ -8,7 +8,6 @@ import { Rating } from './../src/ng2-semantic';
 
 @Component({
   selector: 'demo-app',
-  moduleId: module.id,
   template: `
 <div class="ui container">
   <h1>Home</h1>

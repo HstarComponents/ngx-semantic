@@ -3,6 +3,6 @@ semantic UI in angular2.
 
 # How to view demo？
 
-Execute ``gulp``
+Execute ``npm run start``
 
 Use ``anywhere`` in root path to startup web server.

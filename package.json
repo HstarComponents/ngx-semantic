@@ -1,10 +1,13 @@
 {
   "name": "ng2-semantic",
   "version": "0.0.1",
-  "description": "Semantic UI in angular2",
+  "description": "Semantic UI for angular2",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --inline --progress --port 8080",
+    "start": "npm run server",
+    "build": "webpack",
+    "server1": "webpack-dev-server --inline --progress --display-error-details --profile --colors --watch --display-cached --content-base demo/",
+    "server": "webpack-dev-server  --colors --watch",
     "test": "test"
   },
   "repository": {
@@ -30,7 +33,6 @@
     "@angular/platform-browser-dynamic": "2.0.0-rc.1",
     "@angular/router": "2.0.0-rc.1",
     "@angular/router-deprecated": "2.0.0-rc.1",
-    "core-js": "^2.4.0",
     "es6-shim": "^0.35.0",
     "jquery": "^2.2.3",
     "reflect-metadata": "0.1.2",
@@ -38,16 +40,14 @@
     "zone.js": "0.6.12"
   },
   "devDependencies": {
-    "awesome-typescript-loader": "^0.17.0",
+    "clean-webpack-plugin": "^0.1.9",
     "copy-webpack-plugin": "^3.0.0",
-    "es7-reflect-metadata": "^1.6.0",
     "extract-text-webpack-plugin": "^1.0.1",
-    "html-webpack-plugin": "^2.17.0",
     "raw-loader": "^0.5.1",
     "ts-helpers": "^1.1.1",
     "ts-loader": "^0.8.2",
+    "typescript": "^1.8.10",
     "webpack": "^1.13.0",
-    "webpack-dev-server": "^1.14.1",
-    "webpack-merge": "^0.12.0"
+    "webpack-dev-server": "^1.14.1"
   }
 }
