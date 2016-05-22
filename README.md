@@ -1,8 +1,19 @@
 # ng2-semantic
-semantic UI in angular2.
 
-# How to view demo？
+Semantic UI in angular2.
 
-Execute ``npm run start``
+# How to use？
 
-Use ``anywhere`` in root path to startup web server.
+Use ``npm run build`` build the project.
+
+Use ``npm run start`` or ``npm run server`` start server.
+
+Use ``npm run watch`` to build project and watch changes.
+
+# How to develop?
+
+Start two cmd window. 
+
+Excute ``npm run watch`` and ``npm run start``
+
+Open browser and enter [http://localhost:7410/webpack-dev-server/](http://localhost:7410/webpack-dev-server/)

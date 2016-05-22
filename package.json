@@ -6,8 +6,8 @@
   "scripts": {
     "start": "npm run server",
     "build": "webpack",
-    "server1": "webpack-dev-server --inline --progress --display-error-details --profile --colors --watch --display-cached --content-base demo/",
-    "server": "webpack-dev-server  --colors --watch",
+    "watch": "webpack -w",
+    "server": "webpack-dev-server --inline --progress --profile --colors --watch --display-error-details --display-cached",
     "test": "test"
   },
   "repository": {

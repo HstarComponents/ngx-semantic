@@ -17,21 +17,22 @@ module.exports = {
     demo: './demo/demo.ts'
   },
   output: {
-    path: path.join(__dirname, 'dist'),
-    filename: 'assets/js/[name].js',
+    path: 'dist/assets/js',
+    publicPath: 'http://localhost:7410/assets/js/',
+    filename: '[name].js',
     chunkFilename: '[id].chunk.js'
   },
   module: {
     loaders: [
-      { test: /\.ts$/, loader: 'ts' },
-      { test: /\.html$/, loader: 'raw-loader' }
+      { test: /\.ts$/, loader: 'ts' }
+      // { test: /\.html$/, loader: 'raw-loader' }
     ]
   },
   resolve: {
     extensions: ['', '.js', '.ts']
   },
   plugins: [
-    new CleanWebpackPlugin(['./dist']),
+    // new CleanWebpackPlugin(['./dist']),
     new CommonsChunkPlugin({
       name: ['ng2-semantic', 'vendor', 'polyfills'] //vendor和polyfills设置为公共代码块
     }),
@@ -43,10 +44,9 @@ module.exports = {
   devServer: {
     host: 'localhost',
     port: 7410,
-    contentBase: 'assets/',
+    contentBase: './dist',
     // hot: true,
     historyApiFallback: true,
-    open: true,
-    outputPath: path.join(__dirname, '..', 'dist')
+    open: true
   }
 };
