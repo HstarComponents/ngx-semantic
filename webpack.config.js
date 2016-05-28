@@ -47,7 +47,7 @@ var config = {
   devServer: {
     host: 'localhost',
     port: 7410,
-    contentBase: './dist',
+    contentBase: './demo/public',
     // hot: true,
     historyApiFallback: true,
     open: true
