@@ -1,0 +1,31 @@
+.left-menu {
+  width: 200px;
+  position: fixed;
+  left: 0;
+  top: 40px;
+  bottom: 0;
+}
+
+.left-menu .ui.menu {
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+}
+
+.left-menu .ui.menu  .menu .item{
+  padding-left: 30px;
+}
+
+.page-content {
+  position: fixed;
+  top: 40px;
+  left: 200px;
+  padding: 10px;
+}
+
+.router-link-active{
+  background: yellow !important;
+  color: black !important;
+  font-weight: bold !important;
+  font-size: 14px !important;
+}

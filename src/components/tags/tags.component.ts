@@ -9,25 +9,28 @@ import {ControlValueAccessor, NgModel} from '@angular/common';
   <a class="ui label transition visible" style="display: inline-block !important;" *ngFor="let tag of tags, let index = index">
     {{tag}}<i class="delete icon" (click)="removeTag(index)"></i>
   </a>
-  <input type="text" class="search" [(ngModel)]="inputModel" (keypress)="inputKeyPress($event)" (blur)="inputModel=''">
+  <input type="text" class="search" [(ngModel)]="inputModel" (keypress)="inputKeyPress($event)" (blur)="inputOnBlur()" placeholder="Press enter to input tag">
 </div>`,
-  styles : ['input.search{border: none !important; width: 200px !important;}', '.ui.selection.multiple{width: 100%;}'] 
+  styles: [
+    'input.search{border: none !important; width: 100% !important;}',
+    '.ui.selection.multiple{width: 100%; padding-right: 4px;}'
+  ]
 })
 @Injectable()
 export class Tags implements ControlValueAccessor {
 
   public vm: NgModel;
-  
+
   private onChange: Function;
-  
+
   private onTouched: Function;
-  
+
   private tags: Array<string> = [];
-  
+
   private inputModel: string;
 
   private nativeElement: any;
-  
+
   public constructor(vm: NgModel, templateRef: ElementRef) {
     this.vm = vm;
     vm.valueAccessor = this;
@@ -46,27 +49,35 @@ export class Tags implements ControlValueAccessor {
   public registerOnTouched(fn: () => {}): void {
     this.onTouched = fn;
   }
-  
+
   //endregion
 
   public ngOnInit(): void {
-    
+
   }
-  
-  private syncNgModel(){
+
+  private syncNgModel() {
     this.vm.viewToModelUpdate(this.tags);
   }
-  
+
   private removeTag(idx: number): void {
     this.tags.splice(idx, 1);
     this.syncNgModel();
   }
-  
-  private inputKeyPress(evt):void{
-    if(evt.keyCode === 13){
+
+  private inputKeyPress(evt): void {
+    if (evt.keyCode === 13) {
       this.tags.push(this.inputModel);
       this.inputModel = '';
       this.syncNgModel();
     }
+  }
+
+  private inputOnBlur(): void {
+    if (!this.inputModel) {
+      return;
+    }
+    this.tags.push(this.inputModel);
+    this.inputModel = '';
   }
 } 

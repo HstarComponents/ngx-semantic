@@ -1,4 +1,4 @@
-import {Component, Input, EventEmitter, Self, Output, Injectable, ElementRef} from "@angular/core";
+import {Component, Input, EventEmitter, Output, Injectable, ElementRef} from "@angular/core";
 
 import {ControlValueAccessor, NgModel} from '@angular/common';
 
@@ -36,10 +36,20 @@ export class Rating implements ControlValueAccessor {
   @Input()
   public size: string;
 
-  public constructor(vm: NgModel, templateRef: ElementRef) {
+  public constructor(vm: NgModel, elementRef: ElementRef) {
     this.vm = vm;
     vm.valueAccessor = this;
-    this.nativeElement = templateRef.nativeElement;
+    this.nativeElement = elementRef.nativeElement;
+  }
+    
+  private rate(val: number): void {
+    if (!this.readonly && val > 0 && val <= this.max) {
+      this.rates.forEach((item, i) => {
+        item.active = (i < val);
+      });
+      this.writeValue(val);
+      this.vm.viewToModelUpdate(val);
+    }
   }
 
   //region 以下三个方法是实现ControlValueAccessor
@@ -57,7 +67,7 @@ export class Rating implements ControlValueAccessor {
 
   //endregion
 
-  public ngOnInit(): void {
+  ngOnInit(): void {
     this.rates = [];
     for (let i = 0; i < this.max; i++) {
       let item: { active: boolean } = { active: false };
@@ -65,15 +75,6 @@ export class Rating implements ControlValueAccessor {
         item.active = true;
       }
       this.rates.push(item);
-    }
-  }
-  private rate(val: number): void {
-    if (!this.readonly && val > 0 && val <= this.max) {
-      this.rates.forEach((item, i) => {
-        item.active = (i < val);
-      });
-      this.writeValue(val);
-      this.vm.viewToModelUpdate(val);
     }
   }
 } 

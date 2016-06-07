@@ -61,7 +61,8 @@ if (isWebpackDevServer) {
     new CopyWebpackPlugin([
       { from: './demo/index.html', to: '/' },
       { from: './assets/', to: '/assets/' },
-      { from: './demo/components/', to: '/components/' }
+      { from: './demo/components/', to: '/components/' },
+      { from: './demo/services/', to: '/services/' }
     ])
   );
 }
