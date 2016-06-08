@@ -4,12 +4,12 @@ Semantic UI in angular2.
 
 # 如何使用？
 
-``npm install ng2-semantic``
+``npm install ng2-semantic --save-dev``
 
 xxx.ts
 
 ```typescript
-import {Rating} from 'ng2-semantic/ng2-semantic';
+import {Rating} from 'ng2-semantic';
 ```
 
 # 如何运行demo？
@@ -17,6 +17,8 @@ import {Rating} from 'ng2-semantic/ng2-semantic';
 ``clone`` 项目到本地
 
 通过 ``npm install i`` 初始化依赖
+
+通过 ``typings install`` 初始化定义文件
 
 通过 ``npm install -g webpack webpack-dev-server`` 安装 ``webpack`` 和 ``webpack-dev-server``
 
