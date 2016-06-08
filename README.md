@@ -4,11 +4,13 @@ Semantic UI in angular2.
 
 # 如何使用？
 
-Use ``npm run build`` build the project.
+``npm install ng2-semantic``
 
-Use ``npm run start`` or ``npm run server`` start server.
+xxx.ts
 
-Use ``npm run watch`` to build project and watch changes.
+```typescript
+import {Rating} from 'ng2-semantic/ng2-semantic';
+```
 
 # 如何运行demo？
 
