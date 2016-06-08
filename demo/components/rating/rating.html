@@ -1,1 +1,34 @@
-<h1>GGGG</h1>
+<div>
+  <h1>sm-rating</h1>
+  评分组件
+</div>
+<hr>
+
+<code>
+在使用sm-rating的时候，必须提供ngModel值。
+其他可选属性有：
+<br>
+<p>readonly: boolean，是否只读</p>
+
+<p>max: number,默认为5，表示星星的个数。</p>
+
+<p>type:string,星星的类型，默认五角星，可选['', 'star', heart']</p>
+
+<p>size: string，评分组件的尺寸，可选['mini', 'tiny', 'small', '', 'large', 'huge', 'massive']</p>
+</code>
+
+<br>
+
+<sm-rating [(ngModel)]="value"></sm-rating>
+
+<br>
+
+<sm-rating [(ngModel)]="value" [type]="'heart'"></sm-rating>
+
+<br>
+
+<sm-rating [(ngModel)]="value" [size]="'huge'"></sm-rating>
+
+<br>
+
+<sm-rating [(ngModel)]="value" [type]="'star'" [size]="'massive'"></sm-rating>

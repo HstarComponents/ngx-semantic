@@ -1,0 +1,31 @@
+<div>
+  <h1>sm-tabset</h1>
+  选项卡组件
+</div>
+<hr>
+
+<code>
+在使用sm-rating的时候，必须提供ngModel值。
+其他可选属性有：
+<br>
+<br>
+<p>onTabRemoved: Function, 选项卡被移除后</p>
+
+<p>onTabSelect: Function, 选项卡被选中后</p>
+
+sm-tab的属性：
+
+<p>heading: string，标题</p>
+
+<p>removeble: boolean, 是否可移除（右上角x号）</p>
+</code>
+
+<br>
+
+<sm-tabset (onTabSelected)="onTabSelected($event)" (onTabRemoved)="onTabRemoved($event)">
+  <sm-tab heading="Tab1">Tab 1 content</sm-tab>
+  <sm-tab heading="Tab2" [removable]="true">Tab 2222 content</sm-tab>
+  <sm-tab *ngFor="let tab of tabs, let index = index" heading="{{tab.heading}}" [removable]="tab.removable">
+    aaaaaaaaa, {{index}}
+  </sm-tab>
+</sm-tabset>

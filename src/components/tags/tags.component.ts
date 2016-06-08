@@ -3,7 +3,7 @@ import {Component, Input, EventEmitter, Self, Output, Injectable, ElementRef} fr
 import {ControlValueAccessor, NgModel} from '@angular/common';
 
 @Component({
-  selector: "s-tags[ngModel]",
+  selector: "sm-tags[ngModel]",
   template: `
 <div class="ui dropdown selection multiple small">
   <a class="ui label transition visible" style="display: inline-block !important;" *ngFor="let tag of tags, let index = index">

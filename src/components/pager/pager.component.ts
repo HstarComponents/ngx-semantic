@@ -13,7 +13,7 @@ const defaults = {
 };
 
 @Component({
-  selector: "s-pager[ngModel]",
+  selector: "sm-pager[ngModel]",
   template: `
 <div class="ui small icon buttons" *ngIf="totalCount > 0">
   <button class="ui button" *ngIf="options.showFirstLast" [class.disabled]="page === 1" (click)="goPage('first')">{{options.firstPageText}}</button>
@@ -40,11 +40,11 @@ export class Pager implements ControlValueAccessor {
 
   private pages: Array<number> = [];
 
-  private pageSize: number;
+  private pageSize: number = 20;
 
   private totalCount: number;
 
-  private options: any;
+  private options: any = defaults;
 
   @Input('pageSize')
   private set setPageSize(v: number) {
@@ -111,10 +111,9 @@ export class Pager implements ControlValueAccessor {
   //endregion
 
   private goPage(page) {
-    document.body.click();
     if (page === 'first') {
       if (this.page === 1) {
-        return false;
+        return;
       }
       page = 1;
     } else if (page === 'prev') {
@@ -136,6 +135,7 @@ export class Pager implements ControlValueAccessor {
     }
 
     this.page = page;
+    this.vm.viewToModelUpdate(page);
     this.onPageChaned.emit(page);
   }
 

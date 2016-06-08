@@ -1,0 +1,44 @@
+<div>
+  <h1>sm-progress</h1>
+  进度条组件
+</div>
+<hr>
+
+<code>
+在使用sm-progress的时候，必须提供ngModel值。
+其他可选属性有：
+<br>
+<p>label: string，设置label</p>
+
+<p>text: string, 设置文本</p>
+
+<p>state: string, 状态类型，可选['success']</p>
+
+<p>type:string</p>
+
+<p>size: string，组件尺寸</p>
+
+<p>color: string</p>
+</code>
+
+value: <input type="text" [(ngModel)]="value">
+
+<br>
+
+<sm-progress [(ngModel)]="value" [state]="'success'"></sm-progress>
+
+<br>
+
+<sm-progress [(ngModel)]="value" [color]="'orange'"></sm-progress>
+
+<br>
+
+<sm-progress [(ngModel)]="value" [label]="'true'"></sm-progress>
+
+<br>
+
+<sm-progress [(ngModel)]="value" [text]="'hello'"></sm-progress>
+
+<br>
+
+<sm-progress [(ngModel)]="value" [label]="'true'" [size]="'big'" [text]="hello"></sm-progress>

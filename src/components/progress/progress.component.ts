@@ -3,13 +3,13 @@ import {Component, Input, EventEmitter, Self, Output, Injectable, ElementRef} fr
 import {ControlValueAccessor, NgModel} from '@angular/common';
 
 @Component({
-  selector: "s-progress[ngModel]",
+  selector: "sm-progress[ngModel]",
   template: `
 <div class="ui progress" [ngClass]="getClass()" [ngClass]="state" [attr.data-percent]="value">
   <div class="bar" style="transition-duration: 300ms; width: 100%;" [style.width]="getWidth()">
     <div class="progress">{{text}}</div>
   </div>
-  <div class="label" *ngIf="showLabel">Carga de archivos</div>
+  <div class="label" *ngIf="label">{{label}}</div>
 </div>`
 })
 @Injectable()
@@ -26,13 +26,13 @@ export class Progress implements ControlValueAccessor {
   private value: number;
 
   @Input()
-  public showLabel: boolean;
+  public label: string;
   
   @Input()
   public text: string;
   
   @Input()
-  public state: boolean;
+  public state: string;
   
   @Input()
   public type: string;

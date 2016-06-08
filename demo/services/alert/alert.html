@@ -1,0 +1,16 @@
+<div>
+  alert用于在网页中弹出对话框。具体服务名称是： smAlert
+</div>
+<pre>
+  <code>
+    smAlert.info(msg, showSecond);
+    smAlert.warning(msg, showSecond);
+    smAlert.success(msg, showSecond);
+    smAlert.error(msg, showSecond);
+  </code>
+</pre>
+<hr>
+<button class="ui button" (click)="showInfo()">提示信息</button>
+<button class="ui button" (click)="showWarning()">警告信息</button>
+<button class="ui button" (click)="showSuccess()">成功信息</button>
+<button class="ui button" (click)="showError()">错误信息</button>

@@ -2,7 +2,7 @@ import {ContentChildren, Component, QueryList, Input, AfterContentInit, ElementR
 import {Tab} from './tab.component';
 
 @Component({
-  selector: "s-tabset",
+  selector: "sm-tabset",
   template: `
 <div class="ui tabular menu">
   <div class="item" [attr.data-tab]="tab.tabId" *ngFor="let tab of tabs" [class.active]="tab.active"
@@ -27,7 +27,7 @@ export class Tabset implements AfterContentInit {
   private tabs: Array<Tab> = [];
 
   @Output()
-  public onSelect = new EventEmitter(false);
+  public onTabSelected = new EventEmitter(false);
 
   @Output()
   public onTabRemoved = new EventEmitter(false);
@@ -37,7 +37,7 @@ export class Tabset implements AfterContentInit {
 
   private _setActiveTabAfterActiveTabRemoved(index: number): void {
     let len = this.tabs.length;
-    if(len > 0){
+    if (len > 0) {
       this.tabs[(len > index ? index : (len - 1))].active = true;
     }
   }
@@ -45,7 +45,7 @@ export class Tabset implements AfterContentInit {
   public changeActiveTab(tab: Tab): void {
     this.tabs.forEach(tab => tab.active = false);
     tab.active = true;
-    this.onSelect.emit(this.tabs.indexOf(tab));
+    this.onTabSelected.emit(this.tabs.indexOf(tab));
   }
 
   public addTab(tab: Tab): void {

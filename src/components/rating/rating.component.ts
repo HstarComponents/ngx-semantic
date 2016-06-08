@@ -3,10 +3,10 @@ import {Component, Input, EventEmitter, Output, Injectable, ElementRef} from "@a
 import {ControlValueAccessor, NgModel} from '@angular/common';
 
 @Component({
-  selector: "s-rating[ngModel]",
+  selector: "sm-rating[ngModel]",
   template: `
 <div class="ui rating" [class.star]="type === 'star'" [class.heart]="type === 'heart'" [ngClass]="size">
-  <i class="icon" *ngFor="let item of rates, let index=index" [class.active]="item.active" (click)="rate(index + 1)"></i>
+  <i class="icon" *ngFor="let item of rates, let index=index" [class.active]="index < value" (click)="rate(index + 1)"></i>
 </div>`
 })
 @Injectable()
@@ -14,7 +14,7 @@ export class Rating implements ControlValueAccessor {
 
   public vm: NgModel;
 
-  private value: number;
+  private value: number = 1;
 
   private nativeElement: any;
 
@@ -28,7 +28,7 @@ export class Rating implements ControlValueAccessor {
   public readonly: boolean;
 
   @Input()
-  public max: number;
+  public max: number = 5;
 
   @Input()
   public type: string;
@@ -41,7 +41,7 @@ export class Rating implements ControlValueAccessor {
     vm.valueAccessor = this;
     this.nativeElement = elementRef.nativeElement;
   }
-    
+
   private rate(val: number): void {
     if (!this.readonly && val > 0 && val <= this.max) {
       this.rates.forEach((item, i) => {

@@ -1,14 +1,10 @@
 declare var $;
 
-import {Component, DynamicComponentLoader} from '@angular/core';
-
-let smAlertMarkDivHtml = `
-<div id="sm_alert_mask_div" style="position:fixed; left: 0; right: 0; top:0; bottom: 0; background: rgba(0, 0, 0, 0.45); z-index: 10000; display:none;"></div>
-<div id="sm_alert_container_div"></div> 
-`;
+import {Injectable} from '@angular/core';
+import {SmMask} from './smMask';
 
 let smAlertDivHtml = `
-<div id="{{id}}" style="width: 40%; position: fixed; left: 30%; top: 10%; z-index: 10001; display: none;">
+<div class="sm-alert" id="{{id}}" style="width: 40%; position: fixed; left: 30%; top: 10%; z-index: 1002; display: none;">
     <div class="ui {{type}} icon message">
         <i class="close icon"></i>
         <i class="{{type}} circle icon"></i>
@@ -24,16 +20,17 @@ let smAlertDivHtml = `
 
 const DEFAULT_SECOND = 3;
 
+@Injectable()
 export class SmAlert {
-
-  private $maskDiv;
 
   private $containerDiv;
 
+  private smMask: SmMask;
+
   constructor() {
     let self = this;
-    $('body').append($(smAlertMarkDivHtml));
-    this.$maskDiv = $('#sm_alert_mask_div');
+    this.smMask = new SmMask();
+    $('body').append('<div id="sm_alert_container_div"></div>');
     this.$containerDiv = $('#sm_alert_container_div');
     this.$containerDiv.on('click', '.icon.close', function () {
       let $alert = $(this).parent().parent();
@@ -43,9 +40,11 @@ export class SmAlert {
 
   private _setMaskDivShown(isShown: boolean): void {
     if (isShown) {
-      this.$maskDiv.show();
+      this.smMask.show();
     } else {
-      this.$maskDiv.hide();
+      if (this.$containerDiv.find('.sm-alert').length === 0) {
+        this.smMask.hide();
+      }
     }
   }
 
@@ -64,8 +63,8 @@ export class SmAlert {
       .replace(/{{msg}}/g, msg);
     return $(html);
   }
-  
-  private _show(msg: string, options?: any){
+
+  private _show(msg: string, options?: any) {
     this._setMaskDivShown(true);
     let $alert = this._getAlertDivElement(msg, { type: options.type });
     this.$containerDiv.append($alert);
@@ -81,22 +80,22 @@ export class SmAlert {
       showSecond: showSecond
     });
   }
-  
+
   public success(msg: string, showSecond?: number, options?: any): void {
     this._show(msg, {
       type: 'success',
       showSecond: showSecond
     });
   }
-  
+
   public warning(msg: string, showSecond?: number, options?: any): void {
     this._show(msg, {
       type: 'warning',
       showSecond: showSecond
     });
   }
-  
-  public error (msg: string, showSecond?: number, options?: any): void {
+
+  public error(msg: string, showSecond?: number, options?: any): void {
     this._show(msg, {
       type: 'error',
       showSecond: showSecond

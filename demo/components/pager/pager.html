@@ -1,0 +1,40 @@
+<div>
+  <h1>sm-pager</h1>
+  分页组件
+</div>
+<hr>
+
+<code>
+在使用sm-pager的时候，必须提供ngModel值。
+
+totalCount也必须设置。
+
+具体属性有：
+<br>
+<p>totalCount: number，记录总数</p>
+
+<p>pageSize: number, 每页记录数, 默认20</p>
+
+<p>onPageChaned: Function, 页码变更后</p>
+
+<p>options: {
+  showFirstLast:true, 
+  showPrevNext: true,
+  alwaysShow: true,
+  firstPageText: 'First',
+  prevPageText: 'Prev',
+  nextPageText: 'Next',
+  lastPageText: 'Last'
+}</p>
+
+</code>
+
+<sm-pager [totalCount]="150" [(ngModel)]="value">
+</sm-pager>
+
+<br>
+<br>
+<br>
+
+<sm-pager [totalCount]="150" [(ngModel)]="value" (onPageChaned)="changePage($event)">
+</sm-pager>

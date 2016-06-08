@@ -2,7 +2,7 @@ import {Component, Input, Host, TemplateRef, OnInit, OnDestroy } from "@angular/
 import {Tabset} from './tabset.component';
 
 @Component({
-    selector: "s-tab",
+    selector: "sm-tab",
     template: `
 <div class="ui tab" [attr.data-tab]="tabId" [class.active] = "active">
   <ng-content></ng-content>

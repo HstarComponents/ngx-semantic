@@ -1,7 +1,7 @@
 import {Component, Input, EventEmitter, Self, Output, Injectable, ElementRef} from "@angular/core";
 
 @Component({
-  selector: "s-modal",
+  selector: "sm-modal",
   template: `
 <div class="ui modal" [ngClass]="getModalClass()" [class.fullscreen]="fullScreen">
   <i class="close icon" *ngIf="showCloseBtn"></i>
@@ -47,8 +47,8 @@ export class Modal {
     this.iElement = jQuery(this.nativeElement).find('> .ui.modal');
     this.iElement.modal({
       detachable: false,
-      allowMultiple: true,
-      closable: false,
+      allowMultiple: false,
+      closable: self.showCloseBtn,
       onApprove: () => false,
       onDeny: () => false,
       onHidden: () => self.isShown = false 
