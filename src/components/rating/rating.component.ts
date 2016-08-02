@@ -1,4 +1,4 @@
-import { Component, Input, EventEmitter, Output, Injectable, ElementRef } from "@angular/core";
+import { Component, Input, EventEmitter, Output, Injectable, ElementRef } from '@angular/core';
 
 import { ControlValueAccessor, NgModel } from '@angular/common';
 

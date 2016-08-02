@@ -1,7 +1,7 @@
-import { Directive, ElementRef, Injectable } from "@angular/core";
+import { Directive, ElementRef, Injectable } from '@angular/core';
 
 @Directive({
-  selector: "[modalHeader]",
+  selector: '[modalHeader]',
 })
 @Injectable()
 export class ModalHeader {
