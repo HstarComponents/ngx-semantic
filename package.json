@@ -26,9 +26,11 @@
   "homepage": "https://github.com/HstarStudio/ng2-semantic#readme",
   "dependencies": {
     "@angular/common": "2.0.0-rc.4",
-    "@angular/compiler": "2.0.0-rc.4",
-    "@angular/core": "2.0.0-rc.4",
+    "@angular/core": "2.0.0-rc.4"
+  },
+  "devDependencies": {
     "@angular/http": "2.0.0-rc.4",
+    "@angular/compiler": "2.0.0-rc.4",
     "@angular/platform-browser": "2.0.0-rc.4",
     "@angular/platform-browser-dynamic": "2.0.0-rc.4",
     "@angular/router": "3.0.0-beta.1",
@@ -37,9 +39,7 @@
     "jquery": "2.2.3",
     "reflect-metadata": "0.1.3",
     "rxjs": "5.0.0-beta.8",
-    "zone.js": "0.6.12"
-  },
-  "devDependencies": {
+    "zone.js": "0.6.12",
     "clean-webpack-plugin": "^0.1.9",
     "copy-webpack-plugin": "^3.0.0",
     "extract-text-webpack-plugin": "^1.0.1",

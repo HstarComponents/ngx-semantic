@@ -4,7 +4,7 @@ Semantic UI in angular2.
 
 # How to use?
 
-``npm install ng2-semantic --save-dev``
+``npm install ng2-semantic --save``
 
 **Notice：require angular2 rc.4**
 
