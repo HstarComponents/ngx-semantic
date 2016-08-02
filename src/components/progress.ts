@@ -1,1 +1,1 @@
-export {Progress} from './progress/progress.component';
+export { Progress } from './progress/progress.component';

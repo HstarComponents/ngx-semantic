@@ -1,6 +1,5 @@
-import {Component, Input, EventEmitter, Self, Output, Injectable, ElementRef} from "@angular/core";
-
-import {ControlValueAccessor, NgModel} from '@angular/common';
+import { Component, Input, EventEmitter, Output, Injectable, ElementRef } from '@angular/core';
+import { ControlValueAccessor, NgModel } from '@angular/common';
 
 const defaults = {
   alwaysShow: true,
@@ -13,7 +12,7 @@ const defaults = {
 };
 
 @Component({
-  selector: "sm-pager[ngModel]",
+  selector: 'sm-pager[ngModel]',
   template: `
 <div class="ui small icon buttons" *ngIf="totalCount > 0">
   <button class="ui button" *ngIf="options.showFirstLast" [class.disabled]="page === 1" (click)="goPage('first')">{{options.firstPageText}}</button>
@@ -58,7 +57,7 @@ export class Pager implements ControlValueAccessor {
     this._reCalcData();
   }
 
-  @Input("options")
+  @Input('options')
   private set setOptions(v: any) {
     this.options = this._merge({}, defaults, v);
   }

@@ -1,1 +1,1 @@
-export {Pager} from './pager/pager.component';
+export { Pager } from './pager/pager.component';

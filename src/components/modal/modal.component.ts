@@ -1,7 +1,7 @@
-import {Component, Input, EventEmitter, Self, Output, Injectable, ElementRef} from "@angular/core";
+import { Component, Input, Injectable, ElementRef } from '@angular/core';
 
 @Component({
-  selector: "sm-modal",
+  selector: 'sm-modal',
   template: `
 <div class="ui modal" [ngClass]="getModalClass()" [class.fullscreen]="fullScreen">
   <i class="close icon" *ngIf="showCloseBtn"></i>

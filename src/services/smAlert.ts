@@ -1,7 +1,7 @@
 declare var $;
 
-import {Injectable} from '@angular/core';
-import {SmMask} from './smMask';
+import { Injectable } from '@angular/core';
+import { SmMask } from './smMask';
 
 let smAlertDivHtml = `
 <div class="sm-alert" id="{{id}}" style="width: 40%; position: fixed; left: 30%; top: 10%; z-index: 1002; display: none;">

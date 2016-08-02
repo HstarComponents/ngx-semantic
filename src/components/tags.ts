@@ -1,1 +1,1 @@
-export {Tags} from './tags/tags.component';
+export { Tags } from './tags/tags.component';

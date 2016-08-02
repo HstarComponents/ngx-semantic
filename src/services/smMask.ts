@@ -1,6 +1,6 @@
 declare var $;
 
-import {Injectable} from '@angular/core';
+import { Injectable } from '@angular/core';
 
 let maskHtml = `
 <div id="sm_mask" class="ui dimmer modals page"></div>

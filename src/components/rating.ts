@@ -1,1 +1,1 @@
-export {Rating} from './rating/rating.component';
+export { Rating } from './rating/rating.component';

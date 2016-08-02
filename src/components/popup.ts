@@ -1,1 +1,1 @@
-export {Popup} from './popup/popup.directive';
+export { Popup } from './popup/popup.directive';

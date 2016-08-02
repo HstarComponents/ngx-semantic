@@ -1,8 +1,8 @@
-import {ContentChildren, Component, QueryList, Input, AfterContentInit, ElementRef, EventEmitter, Output, Injectable} from "@angular/core";
-import {Tab} from './tab.component';
+import { Component, AfterContentInit, EventEmitter, Output, Injectable } from '@angular/core';
+import { Tab } from './tab.component';
 
 @Component({
-  selector: "sm-tabset",
+  selector: 'sm-tabset',
   template: `
 <div class="ui tabular menu">
   <div class="item" [attr.data-tab]="tab.tabId" *ngFor="let tab of tabs" [class.active]="tab.active"

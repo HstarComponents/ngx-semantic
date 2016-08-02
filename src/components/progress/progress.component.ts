@@ -1,9 +1,9 @@
-import {Component, Input, EventEmitter, Self, Output, Injectable, ElementRef} from "@angular/core";
+import { Component, Input, Injectable, ElementRef } from '@angular/core';
 
-import {ControlValueAccessor, NgModel} from '@angular/common';
+import { ControlValueAccessor, NgModel } from '@angular/common';
 
 @Component({
-  selector: "sm-progress[ngModel]",
+  selector: 'sm-progress[ngModel]',
   template: `
 <div class="ui progress" [ngClass]="getClass()" [ngClass]="state" [attr.data-percent]="value">
   <div class="bar" style="transition-duration: 300ms; width: 100%;" [style.width]="getWidth()">

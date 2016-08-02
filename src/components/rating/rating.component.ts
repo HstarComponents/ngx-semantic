@@ -1,9 +1,9 @@
-import {Component, Input, EventEmitter, Output, Injectable, ElementRef} from "@angular/core";
+import { Component, Input, EventEmitter, Output, Injectable, ElementRef } from "@angular/core";
 
-import {ControlValueAccessor, NgModel} from '@angular/common';
+import { ControlValueAccessor, NgModel } from '@angular/common';
 
 @Component({
-  selector: "sm-rating[ngModel]",
+  selector: 'sm-rating[ngModel]',
   template: `
 <div class="ui rating" [class.star]="type === 'star'" [class.heart]="type === 'heart'" [ngClass]="size">
   <i class="icon" *ngFor="let item of rates, let index=index" [class.active]="index < value" (click)="rate(index + 1)"></i>

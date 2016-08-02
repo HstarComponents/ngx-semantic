@@ -1,14 +1,15 @@
-import {Component, Input, Host, TemplateRef, OnInit, OnDestroy } from "@angular/core";
-import {Tabset} from './tabset.component';
+import { Component, Input, Host, OnInit, OnDestroy, Injectable } from '@angular/core';
+import { Tabset } from './tabset.component';
 
 @Component({
-    selector: "sm-tab",
+    selector: 'sm-tab',
     template: `
 <div class="ui tab" [attr.data-tab]="tabId" [class.active] = "active">
   <ng-content></ng-content>
 </div>
 `
 })
+@Injectable()
 export class Tab implements OnInit, OnDestroy{
 
     private tabId: string;
