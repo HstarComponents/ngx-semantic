@@ -2,9 +2,11 @@
 
 Semantic UI in angular2.
 
-# 如何使用？
+# How to use?
 
 ``npm install ng2-semantic --save-dev``
+
+**Notice：require angular2 rc.4**
 
 xxx.ts
 
@@ -14,14 +16,14 @@ import {Rating} from 'ng2-semantic';
 
 # 如何运行demo？
 
-``clone`` 项目到本地
+``clone`` Project
 
-通过 ``npm install i`` 初始化依赖
+Use ``npm install i``  to initial dependencies.
 
-通过 ``typings install`` 初始化定义文件
+Use ``typings install`` to initial typings files.
 
-通过 ``npm install -g webpack webpack-dev-server`` 安装 ``webpack`` 和 ``webpack-dev-server``
+Use ``npm install -g webpack webpack-dev-server`` install ``webpack`` and ``webpack-dev-server``.
 
-在项目目录进入控制台，执行 ``npm run start`` 启动web-server
+Open the console, and use ``npm run start`` to startup web server(webpack-dev-server). 
 
-打开浏览器查看 [http://localhost:7410/webpack-dev-server/](http://localhost:7410/webpack-dev-server/)
+Open [http://localhost:7410/webpack-dev-server/](http://localhost:7410/webpack-dev-server/)

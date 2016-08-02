@@ -15,7 +15,6 @@ var config = {
   context: path.join(__dirname, ''),
   entry: {
     'ng2-semantic': ['./src/ng2-semantic.ts'],
-    polyfills: './demo/polyfills.ts',
     vendor: './demo/vendor.ts',
     demo: './demo/demo.ts'
   },
@@ -37,7 +36,7 @@ var config = {
   plugins: [
     new CleanWebpackPlugin(['./dist']),
     new CommonsChunkPlugin({
-      name: ['ng2-semantic', 'vendor', 'polyfills'] //vendor和polyfills设置为公共代码块
+      name: ['ng2-semantic', 'vendor'] //vendor和polyfills设置为公共代码块
     }),
     new CopyWebpackPlugin([
       { from: './demo/index.html', to: path.join(__dirname, 'dist') },
