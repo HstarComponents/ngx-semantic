@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## v0.0.7（2016-08-05）
+
+- Optimized code.
+
 ## v0.0.6（2016-08-05）
 
 - Use new angular/forms.
