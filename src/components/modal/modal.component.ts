@@ -12,11 +12,10 @@ import { Component, Input, Injectable, ElementRef } from '@angular/core';
 export class Modal {
 
   private nativeElement;
-  
+
   private iElement;
 
-  @Input()
-  public set isShown(val: boolean) {
+  @Input() public set isShown(val: boolean) {
     if (this.iElement) {
       if (val === true) {
         this.iElement.modal('show');
@@ -26,23 +25,19 @@ export class Modal {
     }
   }
 
-  @Input()
-  public showCloseBtn: boolean;
+  @Input() public showCloseBtn: boolean;
 
-  @Input()
-  public fullScreen: boolean;
+  @Input() public fullScreen: boolean;
 
-  @Input()
-  public type: string;
+  @Input() public type: string;
 
-  @Input()
-  public size: string;
+  @Input() public size: string;
 
   public constructor(templateRef: ElementRef) {
     this.nativeElement = templateRef.nativeElement;
   }
 
-  public ngAfterViewInit(): void {
+  ngAfterViewInit(): void {
     let self = this;
     this.iElement = jQuery(this.nativeElement).find('> .ui.modal');
     this.iElement.modal({
@@ -51,11 +46,11 @@ export class Modal {
       closable: self.showCloseBtn,
       onApprove: () => false,
       onDeny: () => false,
-      onHidden: () => self.isShown = false 
+      onHidden: () => self.isShown = false
     });
   }
 
-  getModalClass() {
+  private getModalClass(): string {
     return [this.type, this.size].join(' ');
   }
 } 

@@ -10,20 +10,15 @@ import { Tabset } from './tabset.component';
 `
 })
 @Injectable()
-export class Tab implements OnInit, OnDestroy{
-
+export class Tab implements OnInit, OnDestroy {
     private tabId: string;
-
     private tabset: Tabset;
 
-    @Input()
-    public heading: string = '';
+    @Input() public heading: string = '';
 
-    @Input()
-    public active: boolean = false;
+    @Input() public active: boolean = false;
 
-    @Input()
-    public removable: boolean = false;
+    @Input() public removable: boolean = false;
 
     public constructor( @Host() tabset: Tabset) {
         this.tabset = tabset;
@@ -31,16 +26,16 @@ export class Tab implements OnInit, OnDestroy{
         this.tabset.addTab(this);
     }
 
-    private setTabId(): void {
-        var rndStr = `${Date.now()}_${Math.floor((Math.random() * 1000) + 1000)}`;
-        this.tabId = `tab_${rndStr}`;
+    ngOnInit(): void {
+        this.removable = !!this.removable;
     }
 
-    public ngOnInit(): void {
-       this.removable = !!this.removable;
-    }
-
-    public ngOnDestroy(): void {
+    ngOnDestroy(): void {
         this.tabset.removeTab(this);
+    }
+
+    private setTabId(): void {
+        let rndStr = `${Date.now()}_${Math.floor((Math.random() * 1000) + 1000)}`;
+        this.tabId = `tab_${rndStr}`;
     }
 }

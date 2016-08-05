@@ -8,8 +8,7 @@ export class ModalContent {
 
   private nativeElement;
 
-  @Input()
-  public type: string;
+  @Input() public type: string;
 
   public constructor(private elementRef: ElementRef) {
     this.nativeElement = elementRef.nativeElement;

@@ -1,4 +1,4 @@
-import { Component, Input, EventEmitter, Output, Injectable, ElementRef } from '@angular/core';
+import { Component, Input, Output, Injectable, OnInit } from '@angular/core';
 
 import { ControlValueAccessor, NgModel } from '@angular/forms';
 
@@ -10,62 +10,26 @@ import { ControlValueAccessor, NgModel } from '@angular/forms';
 </div>`
 })
 @Injectable()
-export class Rating implements ControlValueAccessor {
-
-  public vm: NgModel;
+export class Rating implements ControlValueAccessor, OnInit {
+  private ngModel: NgModel;
+  private onChange: any = Function.prototype;
+  private onTouched: any = Function.prototype;
 
   private value: number = 1;
-
-  private nativeElement: any;
-
-  private onChange: Function;
-
-  private onTouched: Function;
-
   private rates: Array<any>;
 
-  @Input()
-  public readonly: boolean;
+  @Input() public readonly: boolean;
 
-  @Input()
-  public max: number = 5;
+  @Input() public max: number = 5;
 
-  @Input()
-  public type: string;
+  @Input() public type: string;
 
-  @Input()
-  public size: string;
+  @Input() public size: string;
 
-  public constructor(vm: NgModel, elementRef: ElementRef) {
-    this.vm = vm;
-    vm.valueAccessor = this;
-    this.nativeElement = elementRef.nativeElement;
+  public constructor(ngModel: NgModel) {
+    this.ngModel = ngModel;
+    ngModel.valueAccessor = this;
   }
-
-  private rate(val: number): void {
-    if (!this.readonly && val > 0 && val <= this.max) {
-      this.rates.forEach((item, i) => {
-        item.active = (i < val);
-      });
-      this.writeValue(val);
-      this.vm.viewToModelUpdate(val);
-    }
-  }
-
-  //region 以下三个方法是实现ControlValueAccessor
-  public writeValue(value: number): void {
-    this.value = value;
-  }
-
-  public registerOnChange(fn: (_: any) => {}): void {
-    this.onChange = fn;
-  }
-
-  public registerOnTouched(fn: () => {}): void {
-    this.onTouched = fn;
-  }
-
-  //endregion
 
   ngOnInit(): void {
     this.rates = [];
@@ -77,4 +41,22 @@ export class Rating implements ControlValueAccessor {
       this.rates.push(item);
     }
   }
+
+  private rate(val: number): void {
+    if (!this.readonly && val > 0 && val <= this.max) {
+      this.rates.forEach((item, i) => {
+        item.active = (i < val);
+      });
+      this.writeValue(val);
+      this.ngModel.viewToModelUpdate(val);
+    }
+  }
+
+  //region 以下三个方法是实现ControlValueAccessor
+  public writeValue(value: number): void {
+    this.value = value;
+  }
+  public registerOnChange(fn: (_: any) => {}): void { this.onChange = fn; }
+  public registerOnTouched(fn: () => {}): void { this.onTouched = fn; }
+  //endregion
 } 

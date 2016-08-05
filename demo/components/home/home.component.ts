@@ -1,12 +1,11 @@
 import {Component} from "@angular/core";
-
+import { Pager } from './../../../src/ng2-semantic';
 @Component({
   selector: 'demo-home',
-  template:`
-<h1>Home</h1>
-  `
+  templateUrl: '/components/home/home.html',
+  directives: [Pager]
 })
 
-export class HomeComponent{
-  
+export class HomeComponent {
+
 }

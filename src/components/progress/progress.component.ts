@@ -14,66 +14,49 @@ import { ControlValueAccessor, NgModel } from '@angular/forms';
 })
 @Injectable()
 export class Progress implements ControlValueAccessor {
-
-  public vm: NgModel;
-  
-  private nativeElement: any;
-  
-  private onChange: Function;
-  
-  private onTouched: Function;
+  private ngModel: NgModel;
+  private onChange: any = Function.prototype;
+  private onTouched: any = Function.prototype;
 
   private value: number;
 
-  @Input()
-  public label: string;
-  
-  @Input()
-  public text: string;
-  
-  @Input()
-  public state: string;
-  
-  @Input()
-  public type: string;
+  @Input() public label: string;
 
-  @Input()
-  public size: string;
-  
-  @Input()
-  public color: string;
-  
-  public constructor(vm: NgModel, templateRef: ElementRef) {
-    this.vm = vm;
-    vm.valueAccessor = this;
-    this.nativeElement = templateRef.nativeElement;
+  @Input() public text: string;
+
+  @Input() public state: string;
+
+  @Input() public type: string;
+
+  @Input() public size: string;
+
+  @Input() public color: string;
+
+  public constructor(ngModel: NgModel, templateRef: ElementRef) {
+    this.ngModel = ngModel;
+    ngModel.valueAccessor = this;
   }
 
   //region 以下三个方法是实现ControlValueAccessor
   public writeValue(value: number): void {
     this.value = value;
   }
-
-  public registerOnChange(fn: (_: any) => {}): void {
-    this.onChange = fn;
-  }
-
-  public registerOnTouched(fn: () => {}): void {
-    this.onTouched = fn;
-  }
+  public registerOnChange(fn: (_: any) => {}): void { this.onChange = fn; }
+  public registerOnTouched(fn: () => {}): void { this.onTouched = fn; }
   //endregion
 
   public ngOnInit(): void {
   }
-  
-  public getWidth(): string{
-    if(this.value >= 0 && this.value <= 100){
+
+  private getWidth(): string {
+    if (this.value >= 0 && this.value <= 100) {
       return this.value + '%';
-    }else{
+    } else {
       return 'auto';
     }
   }
-  public getClass(): string{
+
+  private getClass(): string {
     return [this.state, this.type, this.size, this.color].join(' ');
   }
 } 

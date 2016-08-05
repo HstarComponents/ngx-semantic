@@ -24,51 +24,36 @@ const defaults = {
 })
 @Injectable()
 export class Pager implements ControlValueAccessor {
-
-  public vm: NgModel;
-
-  private nativeElement: any;
-
-  private onChange: Function;
-
-  private onTouched: Function;
+  private ngModel: NgModel;
+  private onChange: any = Function.prototype;
+  private onTouched: any = Function.prototype;
 
   private page: number;
-
   private pageCount: number;
-
   private pages: Array<number> = [];
-
   private pageSize: number = 20;
-
   private totalCount: number;
-
   private options: any = defaults;
 
-  @Input('pageSize')
-  private set setPageSize(v: number) {
+  @Input('pageSize') private set setPageSize(v: number) {
     this.pageSize = v;
     this._reCalcData();
   }
 
-  @Input('totalCount')
-  private set setTotalCount(v: number) {
+  @Input('totalCount') private set setTotalCount(v: number) {
     this.totalCount = v;
     this._reCalcData();
   }
 
-  @Input('options')
-  private set setOptions(v: any) {
+  @Input('options') private set setOptions(v: any) {
     this.options = this._merge({}, defaults, v);
   }
 
-  @Output()
-  private onPageChaned: EventEmitter<any> = new EventEmitter();
+  @Output() private onPageChaned: EventEmitter<any> = new EventEmitter();
 
-  public constructor(vm: NgModel, templateRef: ElementRef) {
-    this.vm = vm;
-    vm.valueAccessor = this;
-    this.nativeElement = templateRef.nativeElement;
+  public constructor(ngModel: NgModel) {
+    this.ngModel = ngModel;
+    ngModel.valueAccessor = this;
   }
 
   private _merge(...objs) {
@@ -95,20 +80,6 @@ export class Pager implements ControlValueAccessor {
     }
   }
 
-  //region 以下三个方法是实现ControlValueAccessor
-  public writeValue(value: number): void {
-    this.page = value;
-  }
-
-  public registerOnChange(fn: (_: any) => {}): void {
-    this.onChange = fn;
-  }
-
-  public registerOnTouched(fn: () => {}): void {
-    this.onTouched = fn;
-  }
-  //endregion
-
   private goPage(page) {
     if (page === 'first') {
       if (this.page === 1) {
@@ -134,14 +105,15 @@ export class Pager implements ControlValueAccessor {
     }
 
     this.page = page;
-    this.vm.viewToModelUpdate(page);
+    this.ngModel.viewToModelUpdate(page);
     this.onPageChaned.emit(page);
   }
 
-  ngOnInit(): void {
-    // console.log(this.pageSize, this.totalCount);
+  //region 以下三个方法是实现ControlValueAccessor
+  public writeValue(value: number): void {
+    this.page = value;
   }
-  ngDoCheck(): void {
-    // console.log(this.pageSize, this.totalCount, 'check');
-  }
+  public registerOnChange(fn: (_: any) => {}): void { this.onChange = fn; }
+  public registerOnTouched(fn: () => {}): void { this.onTouched = fn; }
+  //endregion
 } 

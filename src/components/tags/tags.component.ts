@@ -1,4 +1,4 @@
-import { Component, Input, EventEmitter, Self, Output, Injectable, ElementRef } from '@angular/core';
+import { Component, Input, Injectable } from '@angular/core';
 
 import { ControlValueAccessor, NgModel } from '@angular/forms';
 
@@ -18,46 +18,20 @@ import { ControlValueAccessor, NgModel } from '@angular/forms';
 })
 @Injectable()
 export class Tags implements ControlValueAccessor {
-
-  public vm: NgModel;
-
-  private onChange: Function;
-
-  private onTouched: Function;
+  private ngModel: NgModel;
+  private onChange: any = Function.prototype;
+  private onTouched: any = Function.prototype;
 
   private tags: Array<string> = [];
-
   private inputModel: string;
 
-  private nativeElement: any;
-
-  public constructor(vm: NgModel, templateRef: ElementRef) {
-    this.vm = vm;
-    vm.valueAccessor = this;
-    this.nativeElement = templateRef.nativeElement;
-  }
-
-  //region 以下三个方法是实现ControlValueAccessor
-  public writeValue(value: Array<string>): void {
-    this.tags = value || [];
-  }
-
-  public registerOnChange(fn: (_: any) => {}): void {
-    this.onChange = fn;
-  }
-
-  public registerOnTouched(fn: () => {}): void {
-    this.onTouched = fn;
-  }
-
-  //endregion
-
-  public ngOnInit(): void {
-
+  public constructor(ngModel: NgModel) {
+    this.ngModel = ngModel;
+    ngModel.valueAccessor = this;
   }
 
   private syncNgModel() {
-    this.vm.viewToModelUpdate(this.tags);
+    this.ngModel.viewToModelUpdate(this.tags);
   }
 
   private removeTag(idx: number): void {
@@ -80,4 +54,14 @@ export class Tags implements ControlValueAccessor {
     this.tags.push(this.inputModel);
     this.inputModel = '';
   }
+
+  //region 以下三个方法是实现ControlValueAccessor
+  public writeValue(value: Array<string>): void {
+    this.tags = value || [];
+  }
+  public registerOnChange(fn: (_: any) => {}): void { this.onChange = fn; }
+  public registerOnTouched(fn: () => {}): void { this.onTouched = fn; }
+  //endregion
+
+
 } 

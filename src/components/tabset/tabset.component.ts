@@ -16,30 +16,27 @@ import { Tab } from './tab.component';
   styles: [
     '.remove.icon.circle{margin-left: 10px !important; margin-top: -15px !important}',
     '.item.removable{padding-right: 0 !important;}',
-    'i.remove.circle.icon:hover{color: red; cursor: pointer;}'
+    'i.remove.circle.icon:hover{color: red; cursor: pointer;}',
+    '.ui.tabular > .item{cursor: pointer;}'
   ]
 })
 @Injectable()
 export class Tabset implements AfterContentInit {
 
-  private nativeElement;
-
   private tabs: Array<Tab> = [];
 
-  @Output()
-  public onTabSelected = new EventEmitter(false);
+  @Output() public onTabSelected = new EventEmitter(false);
 
-  @Output()
-  public onTabRemoved = new EventEmitter(false);
+  @Output() public onTabRemoved = new EventEmitter(false);
 
   public constructor() {
   }
 
-  private _setActiveTabAfterActiveTabRemoved(index: number): void {
-    let len = this.tabs.length;
-    if (len > 0) {
-      this.tabs[(len > index ? index : (len - 1))].active = true;
-    }
+  public ngAfterContentInit(): void {
+    //设置默认选中第一个
+    const activeTab = this.tabs.filter(tab => tab.active === true);
+    if (activeTab.length === 0 && this.tabs.length > 0)
+      this.tabs[0].active = true;
   }
 
   public changeActiveTab(tab: Tab): void {
@@ -62,10 +59,10 @@ export class Tabset implements AfterContentInit {
     }
   }
 
-  public ngAfterContentInit(): void {
-    //设置默认选中第一个
-    const activeTab = this.tabs.filter(tab => tab.active === true);
-    if (activeTab.length === 0 && this.tabs.length > 0)
-      this.tabs[0].active = true;
+  private _setActiveTabAfterActiveTabRemoved(index: number): void {
+    let len = this.tabs.length;
+    if (len > 0) {
+      this.tabs[(len > index ? index : (len - 1))].active = true;
+    }
   }
 }
