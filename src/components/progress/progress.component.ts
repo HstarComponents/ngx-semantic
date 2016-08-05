@@ -1,6 +1,6 @@
 import { Component, Input, Injectable, ElementRef } from '@angular/core';
 
-import { ControlValueAccessor, NgModel } from '@angular/common';
+import { ControlValueAccessor, NgModel } from '@angular/forms';
 
 @Component({
   selector: 'sm-progress[ngModel]',

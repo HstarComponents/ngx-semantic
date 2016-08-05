@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## v0.0.6（2016-08-05）
+
+- Use new angular/forms.
+
 ## v0.0.5（2016-08-02）
 
 - Move some dependencies to dev.
