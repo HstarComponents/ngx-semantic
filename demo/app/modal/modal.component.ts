@@ -1,5 +1,7 @@
 import { Component, DoCheck } from "@angular/core";
 
+import { SmAlert } from './../../../';
+
 @Component({
   template: require('./modal.html')
 })
@@ -10,7 +12,7 @@ export class ModalComponent implements DoCheck {
 
   private timeoutId: any;
 
-  constructor() {
+  constructor(private smAlert: SmAlert) {
   }
 
   ngDoCheck() {

@@ -1,11 +1,11 @@
 // Services
-import { SmAlert as _SmAlert } from './smAlert';
-export const SmAlert = _SmAlert;
+import { SmAlert } from './smAlert';
+export * from './smAlert';
 
-import { SmMask as _SmMask } from './smMask';
-export const SmMask = _SmMask;
+import { SmMask } from './smMask';
+export * from './smMask';
 
 export const NG2_SEMANTIC_SERVICES = [
-  _SmAlert,
-  _SmMask
+  SmAlert,
+  SmMask
 ];
