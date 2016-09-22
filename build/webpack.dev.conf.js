@@ -7,6 +7,7 @@ let baseConfig = require('./webpack.base.conf');
 
 module.exports = webpackMerge(baseConfig, {
   debug: true,
+  devtool: 'source-map',
   entry: {
     'ng2-semantic': ['./index.ts'],
     vendor: './demo/vendor.ts',
@@ -16,7 +17,8 @@ module.exports = webpackMerge(baseConfig, {
     path: './dist',
     publichPath: 'http://127.0.0.1:7410/',
     filename: '[name].js',
-    chunkFilename: '[id].chunk.js'
+    chunkFilename: '[id].chunk.js',
+    sourceMapFilename: '[name].map',
   },
   plugins: [
     new CommonsChunkPlugin({

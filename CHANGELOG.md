@@ -1,6 +1,12 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## v0.1.0（2016-09-xx）
+
+- Upgrade angular2 to final version.
+- Upgrade semantic to 2.2.4.
+- Use lasest NgModule style. 
+
 ## v0.0.7（2016-08-05）
 
 - Optimized code.

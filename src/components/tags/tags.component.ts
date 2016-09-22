@@ -4,17 +4,8 @@ import { ControlValueAccessor, NgModel } from '@angular/forms';
 
 @Component({
   selector: 'sm-tags[ngModel]',
-  template: `
-<div class="ui dropdown selection multiple small">
-  <a class="ui label transition visible" style="display: inline-block !important;" *ngFor="let tag of tags, let index = index">
-    {{tag}}<i class="delete icon" (click)="removeTag(index)"></i>
-  </a>
-  <input type="text" class="search" [(ngModel)]="inputModel" (keypress)="inputKeyPress($event)" (blur)="inputOnBlur()" placeholder="Press enter to input tag">
-</div>`,
-  styles: [
-    'input.search{border: none !important; width: 100% !important;}',
-    '.ui.selection.multiple{width: 100%; padding-right: 4px;}'
-  ]
+  template: require('./tags.html'),
+  styles: [require('./tags.css')]
 })
 @Injectable()
 export class Tags implements ControlValueAccessor {

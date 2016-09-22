@@ -2,13 +2,11 @@
   "name": "ng2-semantic",
   "version": "0.0.7",
   "description": "Semantic UI for angular2",
-  "main": "index.js",
+  "main": "dist/ng2-semantic.js",
   "scripts": {
     "start": "npm run dev",
-    "dev": "webpack-dev-server --config build/webpack.dev.conf.js  --inline --progress --profile --colors --watch --display-error-details --display-cached",
-    "build": "webpack",
-    "watch": "webpack -w",
-    "server": "webpack-dev-server --inline --progress --profile --colors --watch --display-error-details --display-cached",
+    "dev": "webpack-dev-server --config build/webpack.dev.conf.js --inline --progress --profile --colors --watch --display-error-details --display-cached",
+    "build": "webpack --config build/webpack.prod.conf.js --inline --progress --profile --colors --display-error-details --display-cached",
     "test": "test"
   },
   "repository": {
@@ -25,6 +23,12 @@
     "url": "https://github.com/HstarStudio/ng2-semantic/issues"
   },
   "homepage": "https://github.com/HstarStudio/ng2-semantic#readme",
+  "peerDependencies": {
+    "@angular/common": "2.0.0",
+    "@angular/compiler": "2.0.0",
+    "@angular/core": "2.0.0",
+    "@angular/forms": "2.0.0"
+  },
   "dependencies": {},
   "devDependencies": {
     "@angular/common": "2.0.0",
