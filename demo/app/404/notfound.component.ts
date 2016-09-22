@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  template: '<h1>Home</h1>'
+  template: '<h1>Page Not Found!!!</h1>'
 })
-export class HomeComponent implements OnInit {
+export class NotfoundComponent implements OnInit {
   constructor() { }
 
   ngOnInit() { }

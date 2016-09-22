@@ -8,7 +8,7 @@ let baseConfig = require('./webpack.base.conf');
 module.exports = webpackMerge(baseConfig, {
   debug: true,
   entry: {
-    'ng2-semantic': ['./src/ng2-semantic.ts'],
+    'ng2-semantic': ['./index.ts'],
     vendor: './demo/vendor.ts',
     demo: './demo/demo.ts'
   },

@@ -1,12 +1,8 @@
-import {Component} from "@angular/core";
-
-import {Pager} from './../../../src/ng2-semantic';
+import { Component } from "@angular/core";
 
 @Component({
-  templateUrl: '/components/pager/pager.html',
-  directives: [Pager]
+  template: require('./pager.html')
 })
-
 export class PagerComponent {
   private value: number = 1;
   constructor() {

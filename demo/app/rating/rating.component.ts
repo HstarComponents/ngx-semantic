@@ -1,10 +1,7 @@
 import {Component} from "@angular/core";
 
-import {Rating} from './../../../src/ng2-semantic';
-
 @Component({
-  templateUrl: '/components/rating/rating.html',
-  directives: [Rating]
+  template: require('./rating.html')
 })
 
 export class RatingComponent{

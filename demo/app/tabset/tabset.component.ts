@@ -1,10 +1,7 @@
 import {Component} from "@angular/core";
 
-import {TAB_DIRECTIVES} from './../../../src/ng2-semantic';
-
 @Component({
-  templateUrl: '/components/tabset/tabset.html',
-  directives: [TAB_DIRECTIVES]
+  template: require('./tabset.html')
 })
 
 export class TabsetComponent {

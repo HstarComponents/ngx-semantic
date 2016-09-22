@@ -1,10 +1,7 @@
-import {Component, DoCheck} from "@angular/core";
-
-import {MODAL_DIRECTIVES, SmMask} from './../../../src/ng2-semantic';
+import { Component, DoCheck } from "@angular/core";
 
 @Component({
-  templateUrl: '/components/modal/modal.html',
-  providers: [SmMask]
+  template: require('./modal.html')
 })
 
 export class ModalComponent implements DoCheck {
@@ -13,9 +10,7 @@ export class ModalComponent implements DoCheck {
 
   private timeoutId: any;
 
-  constructor(
-    private smMask: SmMask
-  ) {
+  constructor() {
   }
 
   ngDoCheck() {
