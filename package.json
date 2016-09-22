@@ -7,6 +7,7 @@
     "start": "npm run dev",
     "dev": "webpack-dev-server --config build/webpack.dev.conf.js --inline --progress --profile --colors --watch --display-error-details --display-cached",
     "build": "webpack --config build/webpack.prod.conf.js --inline --progress --profile --colors --display-error-details --display-cached",
+    "build:demo": "webpack --config build/webpack.dev.conf.js --inline --progress --profile --colors --display-error-details --display-cached",
     "test": "test"
   },
   "repository": {

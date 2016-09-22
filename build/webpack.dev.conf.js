@@ -14,7 +14,7 @@ module.exports = webpackMerge(baseConfig, {
     demo: './demo/demo.ts'
   },
   output: {
-    path: './dist',
+    path: './demodist',
     publichPath: 'http://127.0.0.1:7410/',
     filename: '[name].js',
     chunkFilename: '[id].chunk.js',

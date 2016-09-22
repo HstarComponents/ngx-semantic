@@ -13,7 +13,7 @@ module.exports = webpackMerge(baseConfig, {
   output: {
     path: './dist',
     filename: '[name].js',
-    library: 'ng2Semantic',
+    library: 'ng2-semantic',
     libraryTarget: 'umd'
   },
   plugins: [
