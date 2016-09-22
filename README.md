@@ -6,24 +6,31 @@ Semantic UI in angular2.
 
 ``npm install ng2-semantic --save``
 
-**Notice：require angular2 rc.4**
+**Notice：require angular2 final**
 
 xxx.ts
 
 ```typescript
-import {Rating} from 'ng2-semantic';
+import { Rating } from 'ng2-semantic';
 ```
 
-# 如何运行demo？
+# Demo Page
 
-``clone`` Project
+[ng2-semantic Demo](https://hstarstudio.github.io/ng2-semantic)
 
-Use ``npm install i``  to initial dependencies.
 
-Use ``typings install`` to initial typings files.
+# How to develop?
 
-Use ``npm install -g webpack webpack-dev-server`` install ``webpack`` and ``webpack-dev-server``.
+```bash
+# Clone registry
+$ git clone https://github.com/HstarStudio/ng2-semantic.git
 
-Open the console, and use ``npm run start`` to startup web server(webpack-dev-server). 
+# Init dependencies
+$ npm i
 
-Open [http://localhost:7410/webpack-dev-server/](http://localhost:7410/webpack-dev-server/)
+# Start develop envirament
+$ npm run dev
+
+# Open http://localhost:7410 
+
+```

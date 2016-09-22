@@ -4,7 +4,6 @@ import {MODAL_DIRECTIVES, SmMask} from './../../../src/ng2-semantic';
 
 @Component({
   templateUrl: '/components/modal/modal.html',
-  directives: [MODAL_DIRECTIVES],
   providers: [SmMask]
 })
 
