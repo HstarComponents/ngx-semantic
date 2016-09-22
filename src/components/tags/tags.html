@@ -2,6 +2,6 @@
   <a class="ui label transition visible" style="display: inline-block !important;" *ngFor="let tag of tags, let index = index">
     {{tag}}<i class="delete icon" (click)="removeTag(index)"></i>
   </a>
-  <input type="text" class="search" #input [(ngModel)]="inputModel" (keypress)="inputKeyPress($event)" (blur)="inputOnBlur()"
+  <input type="text" class="search" #input [(ngModel)]="inputModel" (keyup.enter)="inputKeyPress($event)" (blur)="inputOnBlur()"
     placeholder="Press enter to input tag">
 </div>

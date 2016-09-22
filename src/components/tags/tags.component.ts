@@ -31,11 +31,13 @@ export class Tags implements ControlValueAccessor {
   }
 
   private inputKeyPress(evt): void {
-    if (evt.keyCode === 13) {
-      this.tags.push(this.inputModel);
-      this.inputModel = '';
-      this.syncNgModel();
+    if (!this.inputModel) {
+      return;
     }
+    this.tags.push(this.inputModel);
+    this.inputModel = '';
+    this.syncNgModel();
+    evt.stopPropagation();
   }
 
   private inputOnBlur(): void {
