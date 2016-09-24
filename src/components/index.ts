@@ -22,6 +22,10 @@ import { AccordionItemComponent } from './accordion/accordion-item.component';
 
 import { DividerComponent } from './divider/divider.component';
 
+import { CardComponent } from './card/card.component';
+import { CardContentComponent } from './card/card-content.component';
+import { CardImageComponent } from './card/card-image.component';
+
 export const NG2_SEMANTIC_COMPONENTS = [
   Modal, ModalActions, ModalContent, ModalHeader,
   Pager,
@@ -31,5 +35,6 @@ export const NG2_SEMANTIC_COMPONENTS = [
   Tab, Tabset,
   Tags,
   AccordionComponent, AccordionItemComponent,
-  DividerComponent
+  DividerComponent,
+  CardComponent, CardContentComponent, CardImageComponent
 ];

@@ -21,7 +21,8 @@ export class LayoutComponent {
         { name: 'tabset', text: 'tabset' },
         { name: 'tags', text: 'tags' },
         { name: 'accordion', text: 'accordion' },
-        { name: 'divider', text: 'divider' }
+        { name: 'divider', text: 'divider' },
+        { name: 'card', text: 'card' }
       ]
     }, {
       type: 'components',

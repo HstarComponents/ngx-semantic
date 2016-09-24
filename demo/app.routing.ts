@@ -7,6 +7,7 @@ import {
   TagsComponent, ProgressComponent,
   TabsetComponent, NotfoundComponent,
   AccordionComponent, DividerDemoComponent,
+  CardDemoComponent,
 
   AlertComponent, MaskComponent
 } from './app';
@@ -32,6 +33,8 @@ const appRoutes: Routes = [
   { path: 'components/tabset', component: TabsetComponent },
   { path: 'components/accordion', component: AccordionComponent },
   { path: 'components/divider', component: DividerDemoComponent },
+  { path: 'components/card', component: CardDemoComponent },
+
   { path: 'services/mask', component: MaskComponent },
   { path: 'services/alert', component: AlertComponent },
   { path: 'lazy', loadChildren: loadModule },

@@ -36,6 +36,9 @@ export * from './alert/alert.component';
 import { MaskComponent } from './mask/mask.component';
 export * from './mask/mask.component';
 
+import { CardDemoComponent } from './card/card-demo.component';
+export * from './card/card-demo.component';
+
 export const ALL_COMPONENTS = [
   HomeComponent,
   ModalComponent,
@@ -48,5 +51,6 @@ export const ALL_COMPONENTS = [
   AccordionComponent,
   DividerDemoComponent,
   AlertComponent,
-  MaskComponent
+  MaskComponent,
+  CardDemoComponent
 ];
