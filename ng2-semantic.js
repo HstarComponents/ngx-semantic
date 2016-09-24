@@ -1,14 +1,71 @@
-webpackJsonp([1],{
-
-/***/ 0:
+webpackJsonp([1],[
+/* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__(60);
 
 
 /***/ },
-
-/***/ 60:
+/* 1 */,
+/* 2 */,
+/* 3 */,
+/* 4 */,
+/* 5 */,
+/* 6 */,
+/* 7 */,
+/* 8 */,
+/* 9 */,
+/* 10 */,
+/* 11 */,
+/* 12 */,
+/* 13 */,
+/* 14 */,
+/* 15 */,
+/* 16 */,
+/* 17 */,
+/* 18 */,
+/* 19 */,
+/* 20 */,
+/* 21 */,
+/* 22 */,
+/* 23 */,
+/* 24 */,
+/* 25 */,
+/* 26 */,
+/* 27 */,
+/* 28 */,
+/* 29 */,
+/* 30 */,
+/* 31 */,
+/* 32 */,
+/* 33 */,
+/* 34 */,
+/* 35 */,
+/* 36 */,
+/* 37 */,
+/* 38 */,
+/* 39 */,
+/* 40 */,
+/* 41 */,
+/* 42 */,
+/* 43 */,
+/* 44 */,
+/* 45 */,
+/* 46 */,
+/* 47 */,
+/* 48 */,
+/* 49 */,
+/* 50 */,
+/* 51 */,
+/* 52 */,
+/* 53 */,
+/* 54 */,
+/* 55 */,
+/* 56 */,
+/* 57 */,
+/* 58 */,
+/* 59 */,
+/* 60 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -18,12 +75,11 @@ webpackJsonp([1],{
 	// Export components module
 	__export(__webpack_require__(61));
 	// Export services
-	__export(__webpack_require__(78));
+	__export(__webpack_require__(86));
 
 
 /***/ },
-
-/***/ 61:
+/* 61 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -62,8 +118,9 @@ webpackJsonp([1],{
 
 
 /***/ },
-
-/***/ 64:
+/* 62 */,
+/* 63 */,
+/* 64 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -78,6 +135,12 @@ webpackJsonp([1],{
 	var tab_component_1 = __webpack_require__(73);
 	var tabset_component_1 = __webpack_require__(74);
 	var tags_component_1 = __webpack_require__(75);
+	var accordion_component_1 = __webpack_require__(78);
+	var accordion_item_component_1 = __webpack_require__(80);
+	var divider_component_1 = __webpack_require__(82);
+	var card_component_1 = __webpack_require__(83);
+	var card_content_component_1 = __webpack_require__(84);
+	var card_image_component_1 = __webpack_require__(85);
 	exports.NG2_SEMANTIC_COMPONENTS = [
 	    modal_component_1.Modal, actions_directive_1.ModalActions, content_directive_1.ModalContent, header_directive_1.ModalHeader,
 	    pager_component_1.Pager,
@@ -85,13 +148,15 @@ webpackJsonp([1],{
 	    progress_component_1.Progress,
 	    rating_component_1.Rating,
 	    tab_component_1.Tab, tabset_component_1.Tabset,
-	    tags_component_1.Tags
+	    tags_component_1.Tags,
+	    accordion_component_1.AccordionComponent, accordion_item_component_1.AccordionItemComponent,
+	    divider_component_1.DividerComponent,
+	    card_component_1.CardComponent, card_content_component_1.CardContentComponent, card_image_component_1.CardImageComponent
 	];
 
 
 /***/ },
-
-/***/ 65:
+/* 65 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -174,8 +239,7 @@ webpackJsonp([1],{
 
 
 /***/ },
-
-/***/ 66:
+/* 66 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -218,8 +282,7 @@ webpackJsonp([1],{
 
 
 /***/ },
-
-/***/ 67:
+/* 67 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -254,8 +317,7 @@ webpackJsonp([1],{
 
 
 /***/ },
-
-/***/ 68:
+/* 68 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -291,8 +353,7 @@ webpackJsonp([1],{
 
 
 /***/ },
-
-/***/ 69:
+/* 69 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -448,8 +509,7 @@ webpackJsonp([1],{
 
 
 /***/ },
-
-/***/ 70:
+/* 70 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -489,8 +549,7 @@ webpackJsonp([1],{
 
 
 /***/ },
-
-/***/ 71:
+/* 71 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -571,8 +630,7 @@ webpackJsonp([1],{
 
 
 /***/ },
-
-/***/ 72:
+/* 72 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -652,8 +710,7 @@ webpackJsonp([1],{
 
 
 /***/ },
-
-/***/ 73:
+/* 73 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -718,8 +775,7 @@ webpackJsonp([1],{
 
 
 /***/ },
-
-/***/ 74:
+/* 74 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -796,8 +852,7 @@ webpackJsonp([1],{
 
 
 /***/ },
-
-/***/ 75:
+/* 75 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -828,11 +883,13 @@ webpackJsonp([1],{
 	        this.syncNgModel();
 	    };
 	    Tags.prototype.inputKeyPress = function (evt) {
-	        if (evt.keyCode === 13) {
-	            this.tags.push(this.inputModel);
-	            this.inputModel = '';
-	            this.syncNgModel();
+	        if (!this.inputModel) {
+	            return;
 	        }
+	        this.tags.push(this.inputModel);
+	        this.inputModel = '';
+	        this.syncNgModel();
+	        evt.stopPropagation();
 	    };
 	    Tags.prototype.inputOnBlur = function () {
 	        if (!this.inputModel) {
@@ -863,42 +920,19 @@ webpackJsonp([1],{
 
 
 /***/ },
-
-/***/ 76:
+/* 76 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"ui dropdown selection multiple small\" (click)=\"input.focus()\">\r\n  <a class=\"ui label transition visible\" style=\"display: inline-block !important;\" *ngFor=\"let tag of tags, let index = index\">\r\n    {{tag}}<i class=\"delete icon\" (click)=\"removeTag(index)\"></i>\r\n  </a>\r\n  <input type=\"text\" class=\"search\" #input [(ngModel)]=\"inputModel\" (keypress)=\"inputKeyPress($event)\" (blur)=\"inputOnBlur()\"\r\n    placeholder=\"Press enter to input tag\">\r\n</div>"
+	module.exports = "<div class=\"ui dropdown selection multiple small\" (click)=\"input.focus()\">\r\n  <a class=\"ui label transition visible\" style=\"display: inline-block !important;\" *ngFor=\"let tag of tags, let index = index\">\r\n    {{tag}}<i class=\"delete icon\" (click)=\"removeTag(index)\"></i>\r\n  </a>\r\n  <input type=\"text\" class=\"search\" #input [(ngModel)]=\"inputModel\" (keyup.enter)=\"inputKeyPress($event)\" (blur)=\"inputOnBlur()\"\r\n    placeholder=\"Press enter to input tag\">\r\n</div>"
 
 /***/ },
-
-/***/ 77:
+/* 77 */
 /***/ function(module, exports) {
 
 	module.exports = "input.search {\r\n  border: none !important;\r\n  width: 200px !important;\r\n  height: 24px;\r\n  line-height: 24px;\r\n  margin-top: 2px;\r\n  padding: 0 5px;\r\n  outline: none;\r\n}\r\n\r\n.ui.selection.multiple {\r\n  width: 100%;\r\n  padding-right: 4px;\r\n}"
 
 /***/ },
-
-/***/ 78:
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	function __export(m) {
-	    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-	}
-	// Services
-	var smAlert_1 = __webpack_require__(79);
-	__export(__webpack_require__(79));
-	var smMask_1 = __webpack_require__(80);
-	__export(__webpack_require__(80));
-	exports.NG2_SEMANTIC_SERVICES = [
-	    smAlert_1.SmAlert,
-	    smMask_1.SmMask
-	];
-
-
-/***/ },
-
-/***/ 79:
+/* 78 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -912,7 +946,317 @@ webpackJsonp([1],{
 	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 	};
 	var core_1 = __webpack_require__(3);
-	var smMask_1 = __webpack_require__(80);
+	var AccordionComponent = (function () {
+	    function AccordionComponent() {
+	        this.data = [];
+	    }
+	    AccordionComponent.prototype.ngOnChanges = function () {
+	        console.log(this.data);
+	    };
+	    AccordionComponent.prototype.ngOnInit = function () {
+	    };
+	    __decorate([
+	        core_1.Input(), 
+	        __metadata('design:type', Array)
+	    ], AccordionComponent.prototype, "data", void 0);
+	    AccordionComponent = __decorate([
+	        core_1.Component({
+	            selector: 'sm-accordion',
+	            template: __webpack_require__(79)
+	        }), 
+	        __metadata('design:paramtypes', [])
+	    ], AccordionComponent);
+	    return AccordionComponent;
+	}());
+	exports.AccordionComponent = AccordionComponent;
+
+
+/***/ },
+/* 79 */
+/***/ function(module, exports) {
+
+	module.exports = "<div class=\"ui accordion styled\">\r\n  <ng-content></ng-content>\r\n</div>\r\n\r\n<!--<div class=\"title\"><i class=\"dropdown icon\"></i> Level 1 </div>\r\n<div class=\"content\">Welcome to level 1\r\n  <div class=\"accordion transition hidden\">\r\n    <div class=\"active title\"><i class=\"dropdown icon\"></i> Level 1A </div>\r\n    <div class=\"active content\">\r\n      <p>Level 1A Contents</p>\r\n      <div class=\"accordion\">\r\n        <div class=\"title\"><i class=\"dropdown icon\"></i> Level 1A-A </div>\r\n        <div class=\"content\">Level 1A-A Contents </div>\r\n        <div class=\"title\"><i class=\"dropdown icon\"></i> Level 1A-B </div>\r\n        <div class=\"content\">Level 1A-B Contents </div>\r\n      </div>\r\n    </div>\r\n    <div class=\"title\"><i class=\"dropdown icon\"></i> Level 1B </div>\r\n    <div class=\"content\">Level 1B Contents </div>\r\n    <div class=\"title\"><i class=\"dropdown icon\"></i> Level 1C </div>\r\n    <div class=\"content\">Level 1C Contents </div>\r\n  </div>\r\n</div>\r\n<div class=\"title active\"><i class=\"dropdown icon\"></i> Level 2 </div>\r\n<div class=\"content active\">\r\n  <p class=\"transition visible\">Welcome to level 2</p>\r\n  <div class=\"accordion transition visible\">\r\n    <div class=\"active title\"><i class=\"dropdown icon\"></i> Level 2A </div>\r\n    <div class=\"active content\">\r\n      <p>Level 2A Contents</p>\r\n      <div class=\"accordion\">\r\n        <div class=\"title\"><i class=\"dropdown icon\"></i> Level 2A-A </div>\r\n        <div class=\"content\">Level 2A-A Contents </div>\r\n        <div class=\"title\"><i class=\"dropdown icon\"></i> Level 2A-B </div>\r\n        <div class=\"content\">Level 2A-B Contents </div>\r\n      </div>\r\n    </div>\r\n    <div class=\"title\"><i class=\"dropdown icon\"></i> Level 2B </div>\r\n    <div class=\"content\">Level 2B Contents </div>\r\n    <div class=\"title\"><i class=\"dropdown icon\"></i> Level 2C </div>\r\n    <div class=\"content\">Level 2C Contents </div>\r\n  </div>\r\n</div>-->"
+
+/***/ },
+/* 80 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+	    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+	    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+	    return c > 3 && r && Object.defineProperty(target, key, r), r;
+	};
+	var __metadata = (this && this.__metadata) || function (k, v) {
+	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+	};
+	var core_1 = __webpack_require__(3);
+	var AccordionItemComponent = (function () {
+	    function AccordionItemComponent() {
+	        this.isActive = false;
+	    }
+	    Object.defineProperty(AccordionItemComponent.prototype, "_active", {
+	        set: function (value) {
+	            this.isActive = value;
+	        },
+	        enumerable: true,
+	        configurable: true
+	    });
+	    AccordionItemComponent.prototype.ngOnInit = function () {
+	    };
+	    __decorate([
+	        core_1.Input(), 
+	        __metadata('design:type', String)
+	    ], AccordionItemComponent.prototype, "title", void 0);
+	    __decorate([
+	        core_1.Input(), 
+	        __metadata('design:type', String)
+	    ], AccordionItemComponent.prototype, "content", void 0);
+	    __decorate([
+	        core_1.Input('active'), 
+	        __metadata('design:type', Object), 
+	        __metadata('design:paramtypes', [Object])
+	    ], AccordionItemComponent.prototype, "_active", null);
+	    AccordionItemComponent = __decorate([
+	        core_1.Component({
+	            selector: 'sm-accordion-item',
+	            template: __webpack_require__(81)
+	        }), 
+	        __metadata('design:paramtypes', [])
+	    ], AccordionItemComponent);
+	    return AccordionItemComponent;
+	}());
+	exports.AccordionItemComponent = AccordionItemComponent;
+
+
+/***/ },
+/* 81 */
+/***/ function(module, exports) {
+
+	module.exports = "<div class=\"title\" [class.active]=\"isActive\" (click)=\"isActive = !isActive\">\r\n  <i class=\"dropdown icon\"></i> {{title}} </div>\r\n<div class=\"content\" [class.active]=\"isActive\">\r\n  <ng-content></ng-content>\r\n</div>"
+
+/***/ },
+/* 82 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+	    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+	    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+	    return c > 3 && r && Object.defineProperty(target, key, r), r;
+	};
+	var __metadata = (this && this.__metadata) || function (k, v) {
+	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+	};
+	var core_1 = __webpack_require__(3);
+	var DividerComponent = (function () {
+	    function DividerComponent(el) {
+	        this.el = el;
+	    }
+	    DividerComponent.prototype.ngOnInit = function () { };
+	    DividerComponent.prototype.ngAfterViewInit = function () {
+	        this.el.nativeElement.parentNode.style.position = 'relative';
+	    };
+	    DividerComponent.prototype.getClassObj = function () {
+	        return {
+	            vertical: this.direction === 'vertical',
+	            horizontal: this.direction === 'horizontal',
+	            inverted: this.variation === 'inverted',
+	            fitted: this.variation === 'fitted',
+	            hidden: this.variation === 'hidden',
+	            section: this.variation === 'section',
+	            clearing: this.variation === 'clearing',
+	            header: this.isHeader
+	        };
+	    };
+	    __decorate([
+	        core_1.Input(), 
+	        __metadata('design:type', String)
+	    ], DividerComponent.prototype, "direction", void 0);
+	    __decorate([
+	        core_1.Input(), 
+	        __metadata('design:type', String)
+	    ], DividerComponent.prototype, "variation", void 0);
+	    __decorate([
+	        core_1.Input(), 
+	        __metadata('design:type', Boolean)
+	    ], DividerComponent.prototype, "isHeader", void 0);
+	    __decorate([
+	        core_1.Input(), 
+	        __metadata('design:type', String)
+	    ], DividerComponent.prototype, "content", void 0);
+	    DividerComponent = __decorate([
+	        core_1.Component({
+	            selector: 'sm-divider',
+	            template: "\n <div class=\"ui vertical divider\" [ngClass]=\"getClassObj()\">\n    {{content}}\n    <ng-content></ng-content>    \n </div>\n  "
+	        }), 
+	        __metadata('design:paramtypes', [(typeof (_a = typeof core_1.ElementRef !== 'undefined' && core_1.ElementRef) === 'function' && _a) || Object])
+	    ], DividerComponent);
+	    return DividerComponent;
+	    var _a;
+	}());
+	exports.DividerComponent = DividerComponent;
+
+
+/***/ },
+/* 83 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+	    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+	    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+	    return c > 3 && r && Object.defineProperty(target, key, r), r;
+	};
+	var __metadata = (this && this.__metadata) || function (k, v) {
+	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+	};
+	var core_1 = __webpack_require__(3);
+	var CardComponent = (function () {
+	    function CardComponent() {
+	    }
+	    CardComponent.prototype.ngOnInit = function () {
+	    };
+	    CardComponent.prototype.getClasses = function () {
+	        return "" + this.variation;
+	    };
+	    __decorate([
+	        core_1.Input(), 
+	        __metadata('design:type', String)
+	    ], CardComponent.prototype, "variation", void 0);
+	    CardComponent = __decorate([
+	        core_1.Component({
+	            selector: 'sm-card',
+	            template: "\n<div class=\"ui card\" [ngClass]=\"getClasses()\">\n  <ng-content></ng-content>\n</div>"
+	        }), 
+	        __metadata('design:paramtypes', [])
+	    ], CardComponent);
+	    return CardComponent;
+	}());
+	exports.CardComponent = CardComponent;
+
+
+/***/ },
+/* 84 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+	    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+	    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+	    return c > 3 && r && Object.defineProperty(target, key, r), r;
+	};
+	var __metadata = (this && this.__metadata) || function (k, v) {
+	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+	};
+	var core_1 = __webpack_require__(3);
+	var CardContentComponent = (function () {
+	    function CardContentComponent(elRef) {
+	        this.elRef = elRef;
+	        this.isExtra = false;
+	    }
+	    CardContentComponent.prototype.ngOnInit = function () {
+	    };
+	    CardContentComponent.prototype.ngAfterViewInit = function () {
+	        this.elRef.nativeElement.className = 'content' + (this.isExtra ? ' extra' : '');
+	    };
+	    __decorate([
+	        core_1.Input(), 
+	        __metadata('design:type', Boolean)
+	    ], CardContentComponent.prototype, "isExtra", void 0);
+	    CardContentComponent = __decorate([
+	        core_1.Component({
+	            selector: '[sm-card-content]',
+	            template: "\n  <ng-content></ng-content>\n  "
+	        }), 
+	        __metadata('design:paramtypes', [(typeof (_a = typeof core_1.ElementRef !== 'undefined' && core_1.ElementRef) === 'function' && _a) || Object])
+	    ], CardContentComponent);
+	    return CardContentComponent;
+	    var _a;
+	}());
+	exports.CardContentComponent = CardContentComponent;
+
+
+/***/ },
+/* 85 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+	    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+	    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+	    return c > 3 && r && Object.defineProperty(target, key, r), r;
+	};
+	var __metadata = (this && this.__metadata) || function (k, v) {
+	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+	};
+	var core_1 = __webpack_require__(3);
+	var CardImageComponent = (function () {
+	    function CardImageComponent(elRef) {
+	        this.elRef = elRef;
+	    }
+	    CardImageComponent.prototype.ngOnInit = function () { };
+	    CardImageComponent.prototype.ngAfterViewInit = function () {
+	        var el = this.elRef.nativeElement;
+	        var classes = 'ui image';
+	        if (el.children.length > 1) {
+	            classes += ' slide masked reveal';
+	        }
+	        el.className = classes;
+	    };
+	    CardImageComponent = __decorate([
+	        core_1.Component({
+	            selector: '[sm-card-image]',
+	            template: "\n<ng-content></ng-content>\n  "
+	        }), 
+	        __metadata('design:paramtypes', [(typeof (_a = typeof core_1.ElementRef !== 'undefined' && core_1.ElementRef) === 'function' && _a) || Object])
+	    ], CardImageComponent);
+	    return CardImageComponent;
+	    var _a;
+	}());
+	exports.CardImageComponent = CardImageComponent;
+
+
+/***/ },
+/* 86 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	function __export(m) {
+	    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+	}
+	// Services
+	var smAlert_1 = __webpack_require__(87);
+	__export(__webpack_require__(87));
+	var smMask_1 = __webpack_require__(88);
+	__export(__webpack_require__(88));
+	exports.NG2_SEMANTIC_SERVICES = [
+	    smAlert_1.SmAlert,
+	    smMask_1.SmMask
+	];
+
+
+/***/ },
+/* 87 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+	    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+	    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+	    return c > 3 && r && Object.defineProperty(target, key, r), r;
+	};
+	var __metadata = (this && this.__metadata) || function (k, v) {
+	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+	};
+	var core_1 = __webpack_require__(3);
+	var smMask_1 = __webpack_require__(88);
 	var smAlertDivHtml = "\n<div class=\"sm-alert\" id=\"{{id}}\" style=\"width: 40%; position: fixed; left: 30%; top: 10%; z-index: 1002; display: none;\">\n    <div class=\"ui {{type}} icon message\">\n        <i class=\"close icon\"></i>\n        <i class=\"{{type}} circle icon\"></i>\n        <div class=\"content\">   \n          <div class=\"header\">\n           {{title}}\n          </div>\n          <p>{{msg}}</p>\n        </div>\n    </div>\n</div>\n";
 	var DEFAULT_SECOND = 3;
 	var SmAlert = (function () {
@@ -995,8 +1339,7 @@ webpackJsonp([1],{
 
 
 /***/ },
-
-/***/ 80:
+/* 88 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -1036,6 +1379,5 @@ webpackJsonp([1],{
 
 
 /***/ }
-
-});
+]);
 //# sourceMappingURL=ng2-semantic.map
