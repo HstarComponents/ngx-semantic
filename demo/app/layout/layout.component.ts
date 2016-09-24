@@ -19,21 +19,23 @@ export class LayoutComponent {
         { name: 'progress', text: 'progress' },
         { name: 'rating', text: 'rating' },
         { name: 'tabset', text: 'tabset' },
-        { name: 'tags', text: 'tags' }
+        { name: 'tags', text: 'tags' },
+        { name: 'accordion', text: 'accordion' },
+        { name: 'divider', text: 'divider' }
       ]
     }, {
-        type: 'components',
-        text: 'Form Components',
-        children: [
+      type: 'components',
+      text: 'Form Components',
+      children: [
 
-        ]
-      }, {
-        type: 'services',
-        text: 'Services',
-        children: [
-          { name: 'alert', text: 'smAlert' },
-          { name: 'mask', text: 'smMask' }
-        ]
-      }];
+      ]
+    }, {
+      type: 'services',
+      text: 'Services',
+      children: [
+        { name: 'alert', text: 'smAlert' },
+        { name: 'mask', text: 'smMask' }
+      ]
+    }];
   }
 } 

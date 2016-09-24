@@ -1,0 +1,12 @@
+<div class="accordion-demo">
+  <sm-accordion>
+    <sm-accordion-item *ngFor="let item of data" [title]="item.title">
+      afdasfdasfafsafsaf
+      <sm-accordion *ngIf="item.children && item.children.length > 0">
+        <sm-accordion-item *ngFor="let item of item.children" [title]="item.title">
+          ABFDAFASDFAS
+        </sm-accordion-item>
+      </sm-accordion>
+    </sm-accordion-item>
+  </sm-accordion>
+</div>

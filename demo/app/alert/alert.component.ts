@@ -1,10 +1,9 @@
-import {Component, Injectable, Inject } from "@angular/core";
+import { Component, Injectable, Inject } from "@angular/core";
 
-import {SmAlert} from './../../../src/ng2-semantic';
+import { SmAlert } from './../../../';
 
 @Component({
-  templateUrl: '/services/alert/alert.html',
-  providers: [SmAlert]
+  template: require('./alert.html')
 })
 
 @Injectable()
@@ -17,15 +16,15 @@ export class AlertComponent {
     this.smAlert.info('Info Message');
   }
 
-  private showWarning(): void{
+  private showWarning(): void {
     this.smAlert.warning('Warning Message');
   }
 
-   private showSuccess(): void{
+  private showSuccess(): void {
     this.smAlert.success('Sucess Message');
   }
 
-   private showError(): void{
+  private showError(): void {
     this.smAlert.error('Error Message');
   }
 }

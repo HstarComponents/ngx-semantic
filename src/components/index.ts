@@ -16,6 +16,12 @@ import { Tabset } from './tabset/tabset.component';
 
 import { Tags } from './tags/tags.component';
 
+import { AccordionComponent } from './accordion/accordion.component';
+
+import { AccordionItemComponent } from './accordion/accordion-item.component';
+
+import { DividerComponent } from './divider/divider.component';
+
 export const NG2_SEMANTIC_COMPONENTS = [
   Modal, ModalActions, ModalContent, ModalHeader,
   Pager,
@@ -23,5 +29,7 @@ export const NG2_SEMANTIC_COMPONENTS = [
   Progress,
   Rating,
   Tab, Tabset,
-  Tags
+  Tags,
+  AccordionComponent, AccordionItemComponent,
+  DividerComponent
 ];

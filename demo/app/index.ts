@@ -22,7 +22,19 @@ import { TabsetComponent } from './tabset/tabset.component';
 export * from './tabset/tabset.component';
 
 import { NotfoundComponent } from './404/notfound.component';
-export * from  './404/notfound.component';
+export * from './404/notfound.component';
+
+import { AccordionComponent } from './accordion/accordion.component';
+export * from './accordion/accordion.component';
+
+import { DividerDemoComponent } from './divider/divider-demo.component';
+export * from './divider/divider-demo.component';
+
+import { AlertComponent } from './alert/alert.component';
+export * from './alert/alert.component';
+
+import { MaskComponent } from './mask/mask.component';
+export * from './mask/mask.component';
 
 export const ALL_COMPONENTS = [
   HomeComponent,
@@ -32,5 +44,9 @@ export const ALL_COMPONENTS = [
   RatingComponent,
   TagsComponent,
   TabsetComponent,
-  NotfoundComponent
+  NotfoundComponent,
+  AccordionComponent,
+  DividerDemoComponent,
+  AlertComponent,
+  MaskComponent
 ];

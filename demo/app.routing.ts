@@ -5,7 +5,10 @@ import {
   HomeComponent, ModalComponent,
   PagerComponent, RatingComponent,
   TagsComponent, ProgressComponent,
-  TabsetComponent, NotfoundComponent
+  TabsetComponent, NotfoundComponent,
+  AccordionComponent, DividerDemoComponent,
+
+  AlertComponent, MaskComponent
 } from './app';
 
 function loadModule(): any {
@@ -27,6 +30,10 @@ const appRoutes: Routes = [
   { path: 'components/tags', component: TagsComponent },
   { path: 'components/progress', component: ProgressComponent },
   { path: 'components/tabset', component: TabsetComponent },
+  { path: 'components/accordion', component: AccordionComponent },
+  { path: 'components/divider', component: DividerDemoComponent },
+  { path: 'services/mask', component: MaskComponent },
+  { path: 'services/alert', component: AlertComponent },
   { path: 'lazy', loadChildren: loadModule },
   { path: '404', component: NotfoundComponent },
   { path: '**', redirectTo: '/404', data: {} }

@@ -1,10 +1,9 @@
 import {Component, Injectable, Inject } from "@angular/core";
 
-import {SmMask} from './../../../src/ng2-semantic';
+import {SmMask} from './../../../';
 
 @Component({
-  templateUrl: '/services/mask/mask.html',
-  providers: [SmMask]
+  template: require('./mask.html')
 })
 
 @Injectable()
