@@ -1,11 +1,11 @@
-import { Component, Input, Injectable } from '@angular/core';
+require('./tags.styl');
 
+import { Component, Input, Injectable } from '@angular/core';
 import { ControlValueAccessor, NgModel } from '@angular/forms';
 
 @Component({
   selector: 'sm-tags[ngModel]',
-  template: require('./tags.html'),
-  styles: [require('./tags.css')]
+  template: require('./tags.html')
 })
 @Injectable()
 export class Tags implements ControlValueAccessor {
